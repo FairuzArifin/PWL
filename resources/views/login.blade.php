@@ -24,10 +24,6 @@
                         <figure><img src="images/desa.png"></figure>
                         <a href="register" class="signup-image-link">Register Warga</a>
                     </div>
-                    <div class="signin-image">
-                        <figure><img src="images/desa.png"></figure>
-                        <a href="register_pic" class="signup-image-link">Register PIC</a>
-                    </div>
                     <div class="signin-form">
                         <h2 class="form-title">Login</h2>
                         <form method="POST" class="register-form" id="login-form">
