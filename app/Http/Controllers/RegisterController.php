@@ -10,7 +10,10 @@ class RegisterController extends Controller
 {
     public function register(){
 
-        return view('register.register');
+        return view('register.register',[
+            'title' => 'Register',
+            'active' => 'register'
+        ]);
     } 
 
     public function store(request $request){
