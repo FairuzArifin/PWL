@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('home'); 
 });
 
+Route::get('/formwarga', function () {
+    return view('formwarga'); 
+});
+
 Route::get('/login',[ LoginController::class, 'login']);
 
 Route::get('/register',[ RegisterController::class, 'register']);
