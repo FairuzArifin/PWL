@@ -28,8 +28,8 @@
                         <h2 class="form-title">Login</h2>
                         <form method="POST" class="register-form" id="login-form">
                             <div class="form-group">
-                                <label for="nik"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="nik" id="nik" placeholder="No NIK"/>
+                                <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Email"/>
                             </div>
                             <div class="form-group">
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
