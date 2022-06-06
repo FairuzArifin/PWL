@@ -21,11 +21,11 @@
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Register Warga</h2>
+                        <h2 class="form-title">Register</h2>
                         <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">
                                 <label for="nik"><i class="zmdi zmdi-account material-icons-nik"></i></label>
-                                <input type="text" name="nik" id="nik" placeholder="No NIK"/>
+                                <input type="text" name="nik" id="nik" placeholder="No Nik"/>
                             </div>
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
