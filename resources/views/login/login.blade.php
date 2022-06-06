@@ -22,7 +22,7 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="images/desa.png"></figure>
-                        <a href="register" class="signup-image-link">Register</a>
+                        <a href="/register" class="signup-image-link">Register</a>
                     </div>
                     <div class="signin-form">
                         <h2 class="form-title">Login</h2>
