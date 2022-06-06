@@ -20,11 +20,11 @@
               <a class="nav-link" href="#">List Administrasi Warga</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#" style="color: rgb(51, 255, 0)">Masuk</a>
+              <a class="nav-link" href="/login" style="color: rgb(51, 255, 0)">Masuk</a>
               <!-- Saat sudah masuk ada querynya yang menggantikan tanda masuk ini menjadi Posting Berita (Hanya PIC)-->
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#" style="color: blue">Mendaftar</a>
+              <a class="nav-link" href="/register" style="color: blue">Mendaftar</a>
               <!-- Saat sudah masuk ada querynya yang menggantikan tanda mendaftar ini menjadi keluar-->
             </li>
           </ul>
