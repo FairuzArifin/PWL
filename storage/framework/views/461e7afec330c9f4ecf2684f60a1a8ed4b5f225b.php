@@ -44,8 +44,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?> "placeholder="No Nik" required/>
-                            </div>
-                            <?php $__errorArgs = ['nik'];
+                                <?php $__errorArgs = ['nik'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -54,10 +53,12 @@ $message = $__bag->first($__errorArgs[0]); ?>
                                     <?php echo e($message); ?>
 
                                 </div>
-                            <?php unset($message);
+                                <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
+                            </div>
+                           
 
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -70,8 +71,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?> "placeholder="Nama Lengkap" required/>
-                            </div>
-                            <?php $__errorArgs = ['name'];
+                                <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -80,10 +80,12 @@ $message = $__bag->first($__errorArgs[0]); ?>
                                     <?php echo e($message); ?>
 
                                 </div>
-                            <?php unset($message);
+                                <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
+                            </div>
+                           
 
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -96,8 +98,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?> "placeholder="Email" required/>
-                            </div>
-                            <?php $__errorArgs = ['email'];
+                                <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -106,10 +107,12 @@ $message = $__bag->first($__errorArgs[0]); ?>
                                     <?php echo e($message); ?>
 
                                 </div>
-                            <?php unset($message);
+                                <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
+                            </div>
+                          
 
                             <div class="form-group">
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
@@ -122,8 +125,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?> "placeholder="Password" required/>
-                            </div>
-                            <?php $__errorArgs = ['password'];
+                                <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -132,10 +134,12 @@ $message = $__bag->first($__errorArgs[0]); ?>
                                     <?php echo e($message); ?>
 
                                 </div>
-                            <?php unset($message);
+                                <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
+                            </div>
+                          
 
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>

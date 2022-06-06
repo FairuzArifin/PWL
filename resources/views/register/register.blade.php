@@ -8,6 +8,7 @@
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
@@ -36,45 +37,49 @@
                                 <label for="nik"><i class="zmdi zmdi-account material-icons-nik"></i></label>
                                 <input type="text" name="nik" id="nik" class="form-control @error('nik') 
                                 is-invalid @enderror "placeholder="No Nik" required/>
-                            </div>
-                            @error('nik')
+                                @error('nik')
                                 <div class="invalid-feedback">
                                     {{$message}}
                                 </div>
-                            @enderror
+                                @enderror
+                            </div>
+                           
 
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" class="form-control @error('name') 
                                 is-invalid @enderror "placeholder="Nama Lengkap" required/>
-                            </div>
-                            @error('name')
+                                @error('name')
                                 <div class="invalid-feedback">
                                     {{$message}}
                                 </div>
-                            @enderror
+                                @enderror
+                            </div>
+                           
 
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" class="form-control @error('email') 
                                 is-invalid @enderror "placeholder="Email" required/>
-                            </div>
-                            @error('email')
+                                @error('email')
                                 <div class="invalid-feedback">
                                     {{$message}}
                                 </div>
-                            @enderror
+                                @enderror
+                            </div>
+                          
 
                             <div class="form-group">
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="password" id="password" class="form-control @error('password') 
                                 is-invalid @enderror "placeholder="Password" required/>
-                            </div>
-                            @error('password')
+                                @error('password')
                                 <div class="invalid-feedback">
                                     {{$message}}
                                 </div>
-                            @enderror
+                                @enderror
+                            </div>
+                          
 
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
