@@ -18,11 +18,11 @@
 
         <!-- Sign in  Form -->
         <section class="sign-in">
-            <div class="container background-color: rgb(9, 255, 0);">
+            <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="images/desa.png"></figure>
-                        <a href="register.blade.php" class="signup-image-link">Register Now</a>
+                        <a href="register" class="signup-image-link">Register Now</a>
                     </div>
 
                     <div class="signin-form">
@@ -40,14 +40,6 @@
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
                             </div>
                         </form>
-                        <div class="social-login">
-                            <span class="social-label">Or login with</span>
-                            <ul class="socials">
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
