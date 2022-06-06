@@ -28,6 +28,8 @@ Route::post('/login',[ LoginController::class, 'authenticate']);
 Route::get('/register',[ RegisterController::class, 'register']);
 Route::post('/register',[ RegisterController::class, 'store']);
 
+Route::get('/dashboard',[ DashboardController::class, 'index']);
+
 //Route::get('/register', function () {
     //return view('register');
 //});
