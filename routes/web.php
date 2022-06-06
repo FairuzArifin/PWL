@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('home'); 
 });
 
-Route::get('/formwarga', function () {
-    return view('formwarga'); 
+Route::get('/form', function () {
+    return view('form'); 
 });
 
 Route::get('/login',[ LoginController::class, 'login']);
