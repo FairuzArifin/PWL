@@ -4,8 +4,8 @@
 
 <?php echo $__env->make('layout.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-        <!---->
-        <div class="login-form-bg">
+    <!---->
+    <div class="login-form-bg">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8 ">
@@ -14,7 +14,7 @@
                             <div class="card login-form mb-0 my-5">
                                 <div class="card-body pt-5">
                                     
-                                        <a class="text-center" href="#"> <h4>Form Pertanyaan</h4></a>
+                                        <a class="text-center" href="#"> <h4>Form Pengaduan</h4></a>
             
                                     <form class="mt-5 mb-5 login-input">
                                         <div class="form-group">
@@ -43,8 +43,8 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <p>Pertanyaan</p>
-                                            <textarea class="px-5" name="deskripsi_pertanyaan" cols="80%" rows="10"></textarea>
+                                            <p>Pengaduan</p>
+                                            <textarea class="px-5" name="deskripsi_pengaduan" cols="80%" rows="10"></textarea>
                                         </div>
 
                                         <button class="btn login-form__btn submit w-100 btn-success">Submit</button>
@@ -60,6 +60,6 @@
         </div>
         
 
-
 <?php echo $__env->make('layout.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-<?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Lalapel\PWL\resources\views/formpertanyaan.blade.php ENDPATH**/ ?>
+
+<?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Lalapel\PWL\resources\views/formpengaduan.blade.php ENDPATH**/ ?>
