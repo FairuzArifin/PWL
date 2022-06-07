@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FormWarga extends Model
+class tabel_form extends Model
 {
     use HasFactory;
 }

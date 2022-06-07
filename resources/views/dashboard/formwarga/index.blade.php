@@ -16,10 +16,10 @@
                           
                           <h4 class="text-center">Form Adminstrasi</h4>
   
-                          <form class="mt-5 mb-5 login-input">
+                          <form method="post" action="" class="mt-5 mb-5 login-input">
 
                               <div class="form-group text-dark">
-                                <select class="form-control"  name="jenis_kelamin" >
+                                <select class="form-control"  name="jenis" >
                                     <option value="#">Pilih Jenis Form</option>
                                     <option value="pertanyaan" name="jenis">Pertanyaan</option>
                                     <option value="permintaan" name="jenis">Permintaan</option>
@@ -31,12 +31,7 @@
                                   <input type="text" class="form-control" name="name" placeholder="Nama"
                                    value="{{ auth()->user()->name }}" required readonly>
                               </div>
-
-                              <div class="form-group">
-                                  <input type="text" class="form-control" name="nik" placeholder="No NIK" 
-                                   value="{{ auth()->user()->nik }}"required readonly>
-                              </div>
-
+                              
                               <div class="form-group">
                                   <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
                               </div>
@@ -46,12 +41,12 @@
                               </div>
 
                               <div class="form-group">
-                                <input type="text" class="form-control" name="Judul" placeholder="judul" required>
+                                <input type="text" class="form-control" name="judul" placeholder="judul" required>
                               </div>
 
                               <div class="form-group">
                                   <p>Keterangan</p>
-                                  <textarea class="px-5" name="Keterangan" cols="80%" rows="5"></textarea>
+                                  <textarea class="px-5" name="deskripsi" cols="80%" rows="5"></textarea>
                               </div>
 
                                <!---Bagian PIC--->

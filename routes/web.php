@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\FormWargaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +30,6 @@ Route::post('/register',[ RegisterController::class, 'store']);
 Route::get('/dashboard', function() {
     return view('dashboard.index');
 })->middleware('auth');
-
-Route::resource('/dashboard/formwarga', FormWargaController::class)
-->middleware('auth');
 
 
 
