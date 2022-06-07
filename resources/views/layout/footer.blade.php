@@ -1,5 +1,5 @@
 <footer class="bg-dark text-center text-white">
-    <div class="container p-4 pb-0 mt-5" >
+    <div class="container p-4 pb-0" >
       <section>
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>

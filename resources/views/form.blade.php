@@ -14,7 +14,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Form Pengurusan</h5>
                   <p class="card-text">Disini anda bisa mengurus surat seperti akte lahir, Kartu keluarga,dll</p>
-                  <a href="#" class="btn btn-primary">Buat Surat</a>
+                  <a href="formurus" class="btn btn-primary">Buat Surat</a>
                 </div>
               </div>
 
@@ -23,7 +23,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Form Pertanyaan</h5>
                       <p class="card-text">Disini anda bisa menanyakan hal apa saja seperti menanyakan dana BLT,dll</p>
-                      <a href="#" class="btn btn-primary">Buat Pertanyaan</a>
+                      <a href="formpertanyaan" class="btn btn-primary">Buat Pertanyaan</a>
                     </div>
                   </div>
 
@@ -32,7 +32,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Form Pengaduan</h5>
                       <p class="card-text">Disini anda bisa melakukan pengaduan seperti jalan/jembatan rusak, lingkungan kotor, dll</p>
-                      <a href="#" class="btn btn-primary">Buat Pengaduan</a>
+                      <a href="formpengaduan" class="btn btn-primary">Buat Pengaduan</a>
                     </div>
                   </div>
             </div>

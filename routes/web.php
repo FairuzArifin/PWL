@@ -22,6 +22,10 @@ Route::get('/form', function () {
     return view('form'); 
 });
 
+Route::get('/formpertanyaan', function () {
+    return view('formpertanyaan'); 
+});
+
 Route::get('/login',[ LoginController::class, 'login']);
 Route::post('/login',[ LoginController::class, 'authenticate']);
 
