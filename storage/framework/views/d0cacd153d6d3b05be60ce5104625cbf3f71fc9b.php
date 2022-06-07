@@ -1,20 +1,20 @@
-@extends('dashboard.layouts.main')
 
-@section('content')
 
-@include('dashboard.layouts.navbar')
+<?php $__env->startSection('content'); ?>
+
+<?php echo $__env->make('dashboard.layouts.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
  <!---->
  <div class="login-form-bg">
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-xl-8 ">
-              {{--form--}}
+              
               <div class="form-input-content">
                   <div class="card login-form mb-0 my-5">
                       <div class="card-body pt-5">
                           
-                              <a class="text-center" href="#"> <h4>Form Adminstrasi</h4></a>
+                          <h4 class="text-center">Form Adminstrasi</h4>
   
                           <form class="mt-5 mb-5 login-input">
 
@@ -29,12 +29,12 @@
 
                               <div class="form-group">
                                   <input type="text" class="form-control" name="name" placeholder="Nama"
-                                   value="{{ auth()->user()->name }}" required readonly>
+                                   value="<?php echo e(auth()->user()->name); ?>" required readonly>
                               </div>
 
                               <div class="form-group">
                                   <input type="text" class="form-control" name="nik" placeholder="No NIK" 
-                                   value="{{ auth()->user()->nik }}"required readonly>
+                                   value="<?php echo e(auth()->user()->nik); ?>"required readonly>
                               </div>
 
                               <div class="form-group">
@@ -70,11 +70,12 @@
                       </div>
                   </div>
               </div>
-              {{--AKHIR --}}
+              
           </div>
       </div>
   </div>
 </div>
-{{----}}
 
-@include('dashboard.layouts.footer')
+
+<?php echo $__env->make('dashboard.layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php echo $__env->make('dashboard.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Lalapel\PWL\resources\views/dashboard/forms/index.blade.php ENDPATH**/ ?>

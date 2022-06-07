@@ -14,7 +14,7 @@
                 <a class="nav-link" href="#">Berita dan Pengumuman</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/form">Form Administrasi</a>
+              <a class="nav-link" href="/dashboard/forms">Form Administrasi</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">List Administrasi Warga</a>

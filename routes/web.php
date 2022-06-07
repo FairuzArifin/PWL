@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardFormController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,13 +28,12 @@ Route::post('/logout',[ LoginController::class, 'logout']);
 Route::get('/register',[ RegisterController::class, 'register']);
 Route::post('/register',[ RegisterController::class, 'store']);
 
-Route::get('/form', function () {
-    return view('form'); 
-})->middleware('auth');
-
 Route::get('/dashboard', function() {
     return view('dashboard.index');
 })->middleware('auth');
+
+Route::resource('/dashboard/forms', DashboardFormController::class)
+->middleware('auth');
 
 
 
