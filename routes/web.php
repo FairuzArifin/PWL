@@ -19,22 +19,6 @@ Route::get('/', function () {
     return view('home'); 
 });
 
-Route::get('/form', function () {
-    return view('form'); 
-});
-
-Route::get('/formpertanyaan', function () {
-    return view('formpertanyaan'); 
-});
-
-Route::get('/formpengaduan', function () {
-    return view('formpengaduan'); 
-});
-
-Route::get('/formurus', function () {
-    return view('formurus'); 
-});
-
 Route::get('/login',[ LoginController::class, 'login'])->middleware('guest');
 Route::post('/login',[ LoginController::class, 'authenticate']);
 Route::post('/logout',[ LoginController::class, 'logout']);
@@ -43,9 +27,15 @@ Route::post('/logout',[ LoginController::class, 'logout']);
 Route::get('/register',[ RegisterController::class, 'register']);
 Route::post('/register',[ RegisterController::class, 'store']);
 
+Route::get('/form', function () {
+    return view('form'); 
+})->middleware('auth');
+
 Route::get('/dashboard', function() {
     return view('dashboard.index');
-})->middleware('auth');;
+})->middleware('auth');
+
+
 
 //Route::get('/register', function () {
     //return view('register');

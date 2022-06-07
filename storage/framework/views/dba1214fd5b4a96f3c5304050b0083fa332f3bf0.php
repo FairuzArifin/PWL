@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
 
-<?php echo $__env->make('layout.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php echo $__env->make('dashboard.layouts.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
  <!---->
  <div class="login-form-bg">
@@ -28,11 +28,13 @@
                               </div>
 
                               <div class="form-group">
-                                  <input type="text" class="form-control" name="name" placeholder="Nama" required readonly>
+                                  <input type="text" class="form-control" name="name" placeholder="Nama"
+                                   value="<?php echo e(auth()->user()->name); ?>" required readonly>
                               </div>
 
                               <div class="form-group">
-                                  <input type="text" class="form-control" name="nik" placeholder="No NIK" required readonly>
+                                  <input type="text" class="form-control" name="nik" placeholder="No NIK" 
+                                   value="<?php echo e(auth()->user()->nik); ?>"required readonly>
                               </div>
 
                               <div class="form-group">
@@ -49,10 +51,20 @@
 
                               <div class="form-group">
                                   <p>Keterangan</p>
-                                  <textarea class="px-5" name="Keterangan" cols="80%" rows="10"></textarea>
+                                  <textarea class="px-5" name="Keterangan" cols="80%" rows="5"></textarea>
                               </div>
 
+                               <!---Bagian PIC--->
+                                <div class="form-group">
+                                <input type="hidden" class="form-control" name="PIC" placeholder="PIC" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="hidden" class="form-control" name="jawaban" placeholder="jawaban" required>
+                                </div>
+                              <!--------------->
+
                               <button class="btn login-form__btn submit w-100 btn-success">Submit</button>
+                
                           </form>
                           </div>
                       </div>
@@ -65,5 +77,5 @@
 </div>
 
 
-<?php echo $__env->make('layout.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-<?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Lalapel\PWL\resources\views/form.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('dashboard.layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php echo $__env->make('dashboard.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Lalapel\PWL\resources\views/form.blade.php ENDPATH**/ ?>
