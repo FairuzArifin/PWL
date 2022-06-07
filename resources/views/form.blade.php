@@ -4,39 +4,65 @@
 
 @include('layout.navbar')
 
-<div class="container-fluid py-3">
-            <div class="container">
-            <h3 class="text-center mb-5">APA YANG BISA KAMI BANTU?</h3>
+ <!---->
+ <div class="login-form-bg">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-xl-8 ">
+              {{--form--}}
+              <div class="form-input-content">
+                  <div class="card login-form mb-0 my-5">
+                      <div class="card-body pt-5">
+                          
+                              <a class="text-center" href="#"> <h4>Form Adminstrasi</h4></a>
+  
+                          <form class="mt-5 mb-5 login-input">
 
-            <div class="card-deck">
-              <div class="card bg-success text-white">
-                <img src="images/urus.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Form Pengurusan</h5>
-                  <p class="card-text">Disini anda bisa mengurus surat seperti akte lahir, Kartu keluarga,dll</p>
-                  <a href="formurus" class="btn btn-primary">Buat Surat</a>
-                </div>
+                              <div class="form-group text-dark">
+                                <select class="form-control"  name="jenis_kelamin" >
+                                    <option value="#">Pilih Jenis Form</option>
+                                    <option value="pertanyaan" name="jenis">Pertanyaan</option>
+                                    <option value="permintaan" name="jenis">Permintaan</option>
+                                    <option value="perngaduan" name="jenis">Pengaduan</option>
+                                </select>
+                              </div>
+
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="name" placeholder="Nama" required readonly>
+                              </div>
+
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="nik" placeholder="No NIK" required readonly>
+                              </div>
+
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
+                              </div>
+  
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="no_hp" placeholder="Nomor Hp" required>
+                              </div>
+
+                              <div class="form-group">
+                                <input type="text" class="form-control" name="Judul" placeholder="judul" required>
+                              </div>
+
+                              <div class="form-group">
+                                  <p>Keterangan</p>
+                                  <textarea class="px-5" name="Keterangan" cols="80%" rows="10"></textarea>
+                              </div>
+
+                              <button class="btn login-form__btn submit w-100 btn-success">Submit</button>
+                          </form>
+                          </div>
+                      </div>
+                  </div>
               </div>
-
-                <div class="card bg-success text-white">
-                    <img src="images/pertanyaan.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Form Pertanyaan</h5>
-                      <p class="card-text">Disini anda bisa menanyakan hal apa saja seperti menanyakan dana BLT,dll</p>
-                      <a href="formpertanyaan" class="btn btn-primary">Buat Pertanyaan</a>
-                    </div>
-                  </div>
-
-                <div class="card bg-success text-white">
-                    <img src="images/pengaduan.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Form Pengaduan</h5>
-                      <p class="card-text">Disini anda bisa melakukan pengaduan seperti jalan/jembatan rusak, lingkungan kotor, dll</p>
-                      <a href="formpengaduan" class="btn btn-primary">Buat Pengaduan</a>
-                    </div>
-                  </div>
-            </div>
+              {{--AKHIR --}}
           </div>
-        </div>
+      </div>
+  </div>
+</div>
+{{----}}
 
 @include('layout.footer')

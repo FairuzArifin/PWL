@@ -1,8 +1,8 @@
-@extends('layout.main')
+@extends('dashboard.layouts.main')
 
 @section('content')
 
-@include('layout.navbar')
+@include('dashboard.layouts.navbar')
 
 <div style="background-color: rgb(9, 255, 0);">
   <div class="container py-5">
@@ -80,4 +80,4 @@
 </div>
 </div> 
 
-@include('layout.footer')
+@include('dashboard.layouts.footer')

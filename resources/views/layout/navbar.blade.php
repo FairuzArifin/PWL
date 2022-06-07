@@ -7,51 +7,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav ml-auto">
-            @auth
-            <li class="nav-item active">
-              <a class="nav-link" href="/dashboard">Halaman Utama</a>
-            </li>
-            @else
             <li class="nav-item active">
               <a class="nav-link" href="/">Halaman Utama</a>
             </li>
-            @endauth
             <li class="nav-item active">
                 <a class="nav-link" href="#">Berita dan Pengumuman</a>
             </li>
-            @auth
-            <li class="nav-item active">
-              <a class="nav-link" href="/form">Form Administrasi</a>
-            </li>
-            @endauth
-            <li class="nav-item active">
-              <a class="nav-link" href="#">List Administrasi Warga</a>
-            </li>
-               {{-- Cek user login atau belum --}}
-              @auth
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" style="color: rgb(51, 255, 0)">
-                      <i class="bi bi-person-circle fs-5"></i>
-                      {{ auth()->user()->name }}
-                    </a>
-                  </li>
-                  </li>
-                  <li class="nav-item active">
-                      <form action="/logout" method="POST">
-                        @csrf
-                        <button type="submit" class="nav-link form-control btn-dark shadow-none" style="color: rgb(255, 0, 0)">
-                        <i class="bi bi-box-arrow-right fs-5"></i>
-                          Logout</button>
-                      </form>
-                  </li>
-              @else
                 <li class="nav-item active">
                   <a class="nav-link" href="/login" style="color: rgb(51, 255, 0)">Masuk</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="/register" style="color: blue">Mendaftar</a>
                 </li>
-              @endauth
           </ul>
       </div>
     </nav>
