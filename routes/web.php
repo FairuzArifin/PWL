@@ -27,8 +27,12 @@ Route::get('/formpertanyaan', function () {
     return view('formpertanyaan'); 
 });
 
-Route::get('/form2', function () {
-    return view('form2'); 
+Route::get('/formpengaduan', function () {
+    return view('formpengaduan'); 
+});
+
+Route::get('/formurus', function () {
+    return view('formurus'); 
 });
 
 Route::get('/login',[ LoginController::class, 'login'])->middleware('guest');
