@@ -16,14 +16,14 @@
                           
                           <h4 class="text-center">Form Adminstrasi</h4>
   
-                          <form method="post" action="" class="mt-5 mb-5 login-input">
-
+                          <form method="post" action="/dashboard/formAdminstrasi" class="mt-5 mb-5 login-input">
+                            @csrf
                               <div class="form-group text-dark">
-                                <select class="form-control"  name="jenis" >
+                                <select class="form-select"  name="jenis" >
                                     <option value="#">Pilih Jenis Form</option>
-                                    <option value="pertanyaan" name="jenis">Pertanyaan</option>
-                                    <option value="permintaan" name="jenis">Permintaan</option>
-                                    <option value="perngaduan" name="jenis">Pengaduan</option>
+                                    <option value="Pertanyaan"> Pertanyaan </option>
+                                    <option value="Permintaan"> Permintaan </option>
+                                    <option value="Pengaduan"> Pengaduan  </option>
                                 </select>
                               </div>
 
