@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\tabel_form;
+use App\models\FormAdminstrasi;
 
 class FormAdminstrasiController extends Controller
 {
@@ -26,7 +26,7 @@ class FormAdminstrasiController extends Controller
            'jawaban' => '', 
        ]);
 
-       tabel_form::create;
+       dd('berhasil');
     }
 }
 

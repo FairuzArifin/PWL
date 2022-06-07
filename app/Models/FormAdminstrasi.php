@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class FormAdminstrasi extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
 }
