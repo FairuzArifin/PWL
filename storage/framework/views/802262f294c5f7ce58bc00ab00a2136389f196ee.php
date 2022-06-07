@@ -4,52 +4,59 @@
 
 <?php echo $__env->make('layout.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-<div class="container-contact100">
-    <div class="wrap-contact100">
-        <form class="contact100-form validate-form">
-            <span class="contact100-form-title">Form Pertanyaan</span>
-                <div class="wrap-input100 validate-input bg1" >
-                    <span class="label-input100">Nama</span>
-                    <input class="input100" type="text" name="nama" placeholder="Masukan Nama Anda" required>
-                </div>
+<div class="login-form-bg h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100">
+                <div class="col-xl-8">
+                    <div class="form-input-content">
+                        <div class="card login-form mb-0 my-5">
+                            <div class="card-body pt-5">
+                                
+                                    <a class="text-center" href="#"> <h4>Form Pertanyaan</h4></a>
+        
+                                <form class="mt-5 mb-5 login-input">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Nama" required>
+                                    </div>
 
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-                    <span class="label-input100">NIK</span>
-                    <input class="input100" type="text" name="nik" placeholder="Masukkan NIK Anda " required>
-                </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="nik" placeholder="No NIK" required>
+                                    </div>
 
-                <div class="wrap-input100 input100-select bg1">
-                    <span class="label-input100">Jenis Kelamin</span>
-                <div>
-                    <select class="form-select " name="jenis_kelamin">
-                        <option>Please chooses</option>
-                        <option>Laki - Laki</option>
-                        <option>Perempuan</option>
-                    </select>
+                                    <div class="form-group">
+                                        <select class="form-control" name="jenis_kelamin" >
+                                            <option value="#">Jenis Kelamin</option>
+                                            <option value="laki" name="jenis_kelamin">Laki - laki</option>
+                                            <option value="perempuan" name="jenis_kelamin">Perempuan</option>
+                                        </select>
+                                    </div>
 
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-                    <span class="label-input100">Alamat</span>
-                    <input class="input100" type="text" name="alamat" placeholder="Masukkan alamat Anda " required>
-                </div>
-                
-                <div class="wrap-input100 bg1 rs1-wrap-input100">
-                    <span class="label-input100">Nomor Hp</span>
-                    <input class="input100" type="text" name="no_hp" placeholder="Masukkan Nomor Hp Anda" required>
-                </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
+                                    </div>
 
-                <div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-                    <span class="label-input100">Pertanyaan</span>
-                    <textarea class="input100" name="pertanyaan" placeholder="Masukkan Pertanyaan Anda"></textarea>
-                </div>
+                                    
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="no_hp" placeholder="Nomor Hp" required>
+                                    </div>
 
-                <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
-                    <span>Submit<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i></span>
-                    </button>
+                                    <div class="form-group">
+                                        <p>Pertanyaan</p>
+                                        <textarea class="px-5" name="deskripsi_pertanyaan" cols="80%" rows="10"></textarea>
+                                    </div>
+
+                                    <button class="btn login-form__btn submit w-100">Submit</button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        </form>
+            </div>
+        </div>
     </div>
-</div>
+    
+
 
 <?php echo $__env->make('layout.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Lalapel\PWL\resources\views/formpertanyaan.blade.php ENDPATH**/ ?>

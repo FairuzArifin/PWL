@@ -19,14 +19,28 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">List Administrasi Warga</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/login" style="color: rgb(51, 255, 0)">Masuk</a>
-              <!-- Saat sudah masuk ada querynya yang menggantikan tanda masuk ini menjadi Posting Berita (Hanya PIC)-->
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/register" style="color: blue">Mendaftar</a>
-              <!-- Saat sudah masuk ada querynya yang menggantikan tanda mendaftar ini menjadi keluar-->
-            </li>
+               
+              <?php if(auth()->guard()->check()): ?>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Welcome Back, <?php echo e(auth()->user()->name); ?>
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                  </li>
+                </li>
+              <?php else: ?>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/login" style="color: rgb(51, 255, 0)">Masuk</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/register" style="color: blue">Mendaftar</a>
+                </li>
+              <?php endif; ?>
           </ul>
       </div>
     </nav><?php /**PATH D:\Lalapel\PWL\resources\views/layout/navbar.blade.php ENDPATH**/ ?>
