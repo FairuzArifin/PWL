@@ -1,8 +1,8 @@
-@extends('layout.main')
+@extends('home.main')
 
 @section('content')
 
-@include('layout.navbar')
+@include('home.navbar')
 
 <div style="background-color: rgb(9, 255, 0);">
   <div class="container py-5">
@@ -80,4 +80,4 @@
 </div>
 </div> 
 
-@include('layout.footer')
+@include('home.footer')
