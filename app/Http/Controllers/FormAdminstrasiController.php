@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\models\tabel_form;
 
 class FormAdminstrasiController extends Controller
 {
@@ -12,9 +13,20 @@ class FormAdminstrasiController extends Controller
     }
 
 
-    public function store()
+    public function store(Request $request)
     {
-        return request()->all();
+       $validateData = $request->validate([
+           'jenis' => 'required',
+           'name' => 'required',
+           'alamat' => 'required',
+           'no_hp' => 'required',
+           'judul' => 'required',
+           'deskripsi' => 'required',
+           'PIC' => '',
+           'jawaban' => '', 
+       ]);
+
+       tabel_form::create;
     }
 }
 

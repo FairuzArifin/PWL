@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTabelFormsTable extends Migration
+class CreateFormAdminstrasisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTabelFormsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tabel_forms', function (Blueprint $table) {
+        Schema::create('form_adminstrasis', function (Blueprint $table) {
             $table->id();
             $table->enum('jenis', ['Pertanyaan','Permintaan','Pengaduan']);
             $table->integer('user_id');
@@ -35,6 +35,6 @@ class CreateTabelFormsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabel_forms');
+        Schema::dropIfExists('form_adminstrasis');
     }
 }

@@ -31,7 +31,6 @@
                                   <input type="text" class="form-control" name="name" placeholder="Nama"
                                    value="{{ auth()->user()->name }}" required readonly>
                               </div>
-                              
                               <div class="form-group">
                                   <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
                               </div>
