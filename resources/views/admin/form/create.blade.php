@@ -35,6 +35,14 @@
                   'route' => ['formupdate', $form->id]])!!}
                 @endif
 
+                    <div class="form-group {{$errors->has('jenis')?'has-error' : ''}}">
+                      {!! Form::label('jenis')!!}
+                      {!! Form::text('jenis', null, ['class' => 'form-control' ,'disabled',])!!}
+                    </div>
+                    @if($errors->has('jenis'))
+                      <span class="help-block">{{$errors->first('jenis')}}</span>
+                    @endif
+
                     <div class="form-group {{$errors->has('judul')?'has-error' : ''}}">
                         {!! Form::label('judul')!!}
                         {!! Form::text('judul', null, ['class' => 'form-control' ,'disabled',])!!}
@@ -53,7 +61,10 @@
 
                     <div class="form-group {{$errors->has('status')?'has-error' : ''}}">
                     {!! Form::label('Status : ')!!}
-                    {!! Form::select('status', array('Diproses','Selesai'), ['class' => 'form-control'])!!}
+                    <select name="status">
+                      <option value="Diproses" selected>Diproses</option>
+                      <option value="Selesai">Selesai</option>
+                      </select>
                     </div>
                     @if($errors->has('status'))
                     <span class="help-block">{{$errors->first('status')}}</span>

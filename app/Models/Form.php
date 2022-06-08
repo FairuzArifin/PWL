@@ -9,7 +9,7 @@ class Form extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'body'];
+    protected $fillable = ['judul', 'deskripsi'];
 
     public function author(){
         return $this->belongsTo(User::class);

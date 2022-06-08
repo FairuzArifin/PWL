@@ -1,6 +1,6 @@
-@extends('layouts.backend.main')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -25,11 +25,12 @@
               <!-- /.box-header -->
               <div class="box-body ">
 
-                @if(session('message'))
+                <?php if(session('message')): ?>
                 <div class="alert alert-info">
-                  {{session('message')}}
+                  <?php echo e(session('message')); ?>
+
                 </div>
-                @endif
+                <?php endif; ?>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -43,25 +44,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($forms as $form)
+                            <?php $__currentLoopData = $forms; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $form): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
                                 <td>
-                                  <a href="{{route('formedit',$form->id)}}" class="btn btn-xs btn-success">
+                                  <a href="<?php echo e(route('formedit',$form->id)); ?>" class="btn btn-xs btn-success">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="{{route('formdelete',$form->id)}}" class="btn btn-xs btn-danger">
+                                <a href="<?php echo e(route('formdelete',$form->id)); ?>" class="btn btn-xs btn-danger">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                                    <td>{{$form->judul}}</td>
-                                    {{-- <td>{{$form->author->name}}</td> --}}
-                                    <td>{{$form->name}}</td>
-                                    <td>{{$form->status}}</td>
-                                    <td>{{$form->PIC}}</td>
-                                    <td>{{$form->jawaban}}</td>
-                                    <td>{{$form->created_at}}</td>
+                                    <td><?php echo e($form->judul); ?></td>
+                                    
+                                    <td><?php echo e($form->name); ?></td>
+                                    <td><?php echo e($form->status); ?></td>
+                                    <td><?php echo e($form->PIC); ?></td>
+                                    <td><?php echo e($form->jawaban); ?></td>
+                                    <td><?php echo e($form->created_at); ?></td>
                                 </td>
                             </tr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </tbody>
                     </table>
               </div>
@@ -69,11 +70,12 @@
               <div class="box-footer">
                   <div class="pull-left">
                     <ul class="pagination no-margin">
-                        {{$forms->links("pagination::bootstrap-4")}}
+                        <?php echo e($forms->links("pagination::bootstrap-4")); ?>
+
                     </ul>
                   </div>
                   <div class="pull-right">
-                      <small> Jumlah Pertanyaan : {{$forms->count()}} dari {{$forms->total()}}</small>
+                      <small> Jumlah Pertanyaan : <?php echo e($forms->count()); ?> dari <?php echo e($forms->total()); ?></small>
                   </div>
               </div>
             </div>
@@ -86,4 +88,5 @@
   </div>
   <!-- /.content-wrapper -->
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.backend.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Tubes\PWL\resources\views/admin/form/index.blade.php ENDPATH**/ ?>

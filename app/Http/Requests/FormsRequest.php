@@ -24,12 +24,12 @@ class FormsRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'title' => 'required',
-            'form' => 'required',
+            'PIC' => 'required',
+            'status' => 'required',
         ];
 
         switch($this->method()){
-            case 'PUT' : $rules['title'] = 'required' . $this->route('adminedit');
+            case 'PUT' : $rules['status'] = 'required' . $this->route('formedit');
             break;
         }
         return $rules;
