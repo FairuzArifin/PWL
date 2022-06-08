@@ -22,6 +22,7 @@ class CreateFormAdminstrasisTable extends Migration
             $table->string('no_hp');
             $table->string('judul');
             $table->text('deskripsi');
+            $table->enum('status', ['Diproses','Selesai']);
             $table->string('PIC')->nullable();
             $table->string('jawaban')->nullable(); 
             $table->timestamps();
