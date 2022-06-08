@@ -11,4 +11,9 @@ class AdminViewController extends Controller
         return view('admin.home');
     }
 
+    public function pic()
+    {
+        return view('pic.home');
+    }
+
 }

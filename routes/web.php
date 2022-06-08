@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminViewController;
 use App\Http\Controllers\FormAdminstrasiController;
 use App\Http\Controllers\Admin\FormController;
 use App\Http\Controllers\Admin\BeritaController;
+use App\Http\Controllers\pic\FormsController;
 
 
 /*
@@ -41,6 +42,7 @@ Route::post('/dashboard/formAdminstrasi',[ FormAdminstrasiController::class, 'st
 Route::get('/dashboard/listform',[ FormAdminstrasiController::class, 'list']);
 
 Route::get('/admin',[ AdminViewController::class, 'index']);
+Route::get('/pic',[ AdminViewController::class, 'pic']);
 
 Route::get('/Admin/berita', [App\Http\Controllers\Admin\Beritacontroller::class, 'index'])->name('beritaindex');
 Route::get('/Admin/berita/create', [App\Http\Controllers\Admin\Beritacontroller::class, 'create'])->name('beritacreate');
@@ -63,6 +65,12 @@ Route::get('/Admin/user/delete{id}', [App\Http\Controllers\Admin\Usercontroller:
 Route::post('/Admin/user/store', [App\Http\Controllers\Admin\Usercontroller::class, 'store'])->name('userstore');
 Route::put('/Admin/user/update/{id}', [App\Http\Controllers\Admin\Usercontroller::class, 'update'])->name('userupdate');
 
+Route::get('/pic/form', [App\Http\Controllers\PIC\Formscontroller::class, 'index'])->name('formindex');
+Route::get('/pic/create', [App\Http\Controllers\PIC\Formscontroller::class, 'create'])->name('formcreate');
+Route::get('/pic/edit/{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'edit'])->name('formedit');
+Route::get('/pic/delete{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'destroy'])->name('formdelete');
+Route::post('/pic/store', [App\Http\Controllers\PIC\Formscontroller::class, 'store'])->name('formstore');
+Route::put('/pic/update/{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'update'])->name('formupdate');
 //Route::get('/register', function () {
     //return view('register');
 //});

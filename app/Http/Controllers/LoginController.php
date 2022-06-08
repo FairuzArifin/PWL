@@ -29,9 +29,9 @@ class LoginController extends Controller
                 return redirect()->intended('/dashboard');
             } elseif (Auth::user()->level === "Admin") {
                 return redirect()->intended('/admin');
+            }  else (Auth::user()->level === "PIC");{
+             return redirect()->intended('/pic');
             }
-            
-
         }
 
         return back()->with('loginError', 'Login gagal!');

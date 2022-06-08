@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function posts(){
         return $this->hasMany(Berita::class, 'author_id');
     }
+
+    public function forms(){
+        return $this->hasMany(FormAdminstrasi::class, 'user_id');
+    }
 }

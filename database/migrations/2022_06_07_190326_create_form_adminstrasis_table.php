@@ -16,7 +16,8 @@ class CreateFormAdminstrasisTable extends Migration
         Schema::create('form_adminstrasis', function (Blueprint $table) {
             $table->id();
             $table->enum('jenis', ['Pertanyaan','Permintaan','Pengaduan']);
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');;
             $table->string('name');
             $table->string('alamat');
             $table->string('no_hp');
