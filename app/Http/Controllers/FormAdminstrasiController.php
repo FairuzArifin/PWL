@@ -14,6 +14,8 @@ class FormAdminstrasiController extends Controller
         return view('dashboard.formAdminstrasi.index');
     }
 
+    protected $limit = 5;
+    
     public function list()
     {
         $forms = FormAdminstrasi::paginate($this->limit);

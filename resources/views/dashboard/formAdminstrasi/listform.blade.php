@@ -18,7 +18,7 @@
                                 <div class="row">
                                     <!-- List Pertanyaan Warga -->
                                     <div class="col-6 text-left">
-                                        <h4 class="card-title">List Pertanyaan Warga</h4>
+                                        <h4 class="card-title">Histori Adminstrasi Warga</h4>
                                     </div>
 
                                     <table class ='table table-bordered text-center'>
@@ -39,16 +39,16 @@
                                         <tbody>
                                             @foreach($forms as $form)
                                             <tr>
-                                                <td></td>
-                                                <td></td>
+                                                <td>{{$form->jenis}}</td>
+                                                <td>{{$form->name}}</td>
                                                 <td>{{$form->judul}}</td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>{{$form->deskripsi}}</td>
+                                                <td>{{$form->alamat}}</td>
+                                                <td>{{$form->no_hp}}</td>
+                                                <td>{{$form->status}}</td>
+                                                <td>{{$form->PIC}}</td>
+                                                <td>{{$form->jawaban}}</td>
+                                                <td>{{$form->created_at}}</td>
                                             <tr>
                                             @endforeach
                                         </tbody>
