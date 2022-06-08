@@ -15,7 +15,7 @@ class FormAdminstrasiController extends Controller
 
     public function store(Request $request)
     {
-       $validateData = $request->validate([
+       $validatedData = $request->validate([
            'jenis' => 'required',
            'name' => 'required',
            'alamat' => 'required',
@@ -26,7 +26,11 @@ class FormAdminstrasiController extends Controller
            'jawaban' => '', 
        ]);
 
-       dd('berhasil');
+       $validatedData['user_id'] = auth()->user()->id;
+
+       FormAdminstrasi::create($validatedData);
+
+       return redirect('dashbord/formAdmintrasi/listAdminstrasi');
     }
 }
 

@@ -16,7 +16,7 @@
                           
                           <h4 class="text-center">Form Adminstrasi</h4>
   
-                          <form method="post" action="/dashboard/formAdminstrasi" class="mt-5 mb-5 login-input">
+                          <form method="post" action="/dashboard" class="mt-5 mb-5 login-input">
                             @csrf
                               <div class="form-group text-dark">
                                 <select class="form-select"  name="jenis" >

@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('level', ['Admin','PIC','Warga']);
+            $table->enum('level', ['Admin','PIC','Warga'])->default('Warga');
             $table->rememberToken();
             $table->timestamps();
         });
