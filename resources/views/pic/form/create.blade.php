@@ -59,6 +59,15 @@
                     <span class="help-block">{{$errors->first('deskripsi')}}</span>
                     @endif
 
+                    <br>
+                    <div class="form-group {{$errors->has('status')?'has-error' : ''}}">
+                      {!! Form::label('Status : ')!!}
+                      {!! Form::text('status', null, ['value' => 'form-control', 'readonly'])!!}
+                      @if($errors->has('status'))
+                      <span class="help-block">{{$errors->first('status')}}</span>
+                    @endif
+                    <br><br>
+
                     <div class="form-group {{$errors->has('PIC')?'has-error' : ''}}">
                       {!! Form::label('PIC', 'Diteruskan ke : ') !!}
                       {!! Form::text('PIC', null, ['class' => 'form-control'])!!}
