@@ -5,10 +5,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{asset('backend/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+          <img src="<?php echo e(asset('backend/img/user2-160x160.jpg')); ?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>{{Auth::user()->name}}</p>
+          <p><?php echo e(Auth::user()->name); ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -29,8 +29,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{route('beritaindex')}}"><i class="fa fa-circle-o"></i> List Berita</a></li>
-            {{-- <li><a href="{{route('beritacreate')}}"><i class="fa fa-circle-o"></i> Buat Berita</a></li> --}}
+            <li><a href="<?php echo e(route('beritaindex')); ?>"><i class="fa fa-circle-o"></i> List Berita</a></li>
+            
           </ul>
         </li>
         <li class="treeview">
@@ -42,11 +42,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{route('formindex')}}"><i class="fa fa-circle-o"></i> List Pertanyaan</a></li>
-            <li><a href="{{route('formcreate')}}"><i class="fa fa-circle-o"></i> Edit Pertanyaan</a></li>
+            <li><a href="<?php echo e(route('formindex')); ?>"><i class="fa fa-circle-o"></i> List Pertanyaan</a></li>
+            <li><a href="<?php echo e(route('formcreate')); ?>"><i class="fa fa-circle-o"></i> Edit Pertanyaan</a></li>
           </ul>
         </li>
       </ul>
     </section>
     <!-- /.sidebar -->
-  </aside>
+  </aside><?php /**PATH D:\Lalapel\PWL\resources\views/layouts/backend/sidebar.blade.php ENDPATH**/ ?>

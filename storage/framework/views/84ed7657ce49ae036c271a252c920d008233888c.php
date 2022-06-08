@@ -20,16 +20,17 @@
       <ul class="nav navbar-nav">
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="{{asset('backend/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-            <span class="hidden-xs">{{Auth::user()->name}}</span>
+            <img src="<?php echo e(asset('backend/img/user2-160x160.jpg')); ?>" class="user-image" alt="User Image">
+            <span class="hidden-xs"><?php echo e(Auth::user()->name); ?></span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
-              <img src="{{asset('backend/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+              <img src="<?php echo e(asset('backend/img/user2-160x160.jpg')); ?>" class="img-circle" alt="User Image">
 
               <p>
-                {{Auth::user()->name}}
+                <?php echo e(Auth::user()->name); ?>
+
                 <small>Saya seorang Admin hehe</small>
               </p>
             </li>
@@ -39,10 +40,10 @@
                 <a href="#" class="btn btn-default btn-flat">Profile</a>
               </div>
               <div class="pull-right">
-                <a href="{{route('logout')}}" class="btn btn-default btn-flat">Sign out</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                <a href="<?php echo e(route('logout')); ?>" class="btn btn-default btn-flat">Sign out</a>
+                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
                         <button class="btn btn-danger" type="submit">Sign Out</button>
-                        @csrf
+                        <?php echo csrf_field(); ?>
                       </form>
               </div>
             </li>
@@ -51,4 +52,4 @@
       </ul>
     </div>
   </nav>
-</header>
+</header><?php /**PATH D:\Lalapel\PWL\resources\views/layouts/backend/navbar.blade.php ENDPATH**/ ?>

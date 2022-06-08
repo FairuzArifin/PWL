@@ -35,25 +35,25 @@
                   'route' => ['formupdate', $form->id]])!!}
                 @endif
 
-                    <div class="form-group {{$errors->has('title')?'has-error' : ''}}">
-                        {!! Form::label('title')!!}
-                        {!! Form::text('title', null, ['class' => 'form-control'])!!}
+                    <div class="form-group {{$errors->has('judul')?'has-error' : ''}}">
+                        {!! Form::label('judul')!!}
+                        {!! Form::text('judul', null, ['class' => 'form-control'])!!}
                     </div>
-                    @if($errors->has('title'))
-                    <span class="help-block">{{$errors->first('title')}}</span>
+                    @if($errors->has('judul'))
+                    <span class="help-block">{{$errors->first('judul')}}</span>
                     @endif
                     
-                    <div class="form-group {{$errors->has('form')?'has-error' : ''}}">
-                        {!! Form::label('form')!!}
-                        {!! Form::textarea('form', null, ['class' => 'form-control'])!!}
+                    <div class="form-group {{$errors->has('deskripsi')?'has-error' : ''}}">
+                        {!! Form::label('deskripsi')!!}
+                        {!! Form::textarea('deskripsi', null, ['class' => 'form-control'])!!}
                     </div>
-                    @if($errors->has('form'))
-                    <span class="help-block">{{$errors->first('form')}}</span>
+                    @if($errors->has('deskripsi'))
+                    <span class="help-block">{{$errors->first('deskripsi')}}</span>
                     @endif
 
                     <div class="form-group {{$errors->has('status')?'has-error' : ''}}">
                     {!! Form::label('status')!!}
-                    {!! Form::checkbox('status', 'yes', true, ['class' => 'form-control'])!!}
+                    {!! Form::checkbox('status', 'selesai', true, ['class' => 'form-control'])!!}
                     </div>
                     @if($errors->has('status'))
                     <span class="help-block">{{$errors->first('status')}}</span>
@@ -67,12 +67,12 @@
                     <span class="help-block">{{$errors->first('pic')}}</span>
                     @endif
 
-                    <div class="form-group {{$errors->has('answer')?'has-error' : ''}}">
-                      {!! Form::label('answer')!!}
-                      {!! Form::textarea('answer', null, ['class' => 'form-control'])!!}
+                    <div class="form-group {{$errors->has('jawaban')?'has-error' : ''}}">
+                      {!! Form::label('jawaban')!!}
+                      {!! Form::textarea('jawaban', null, ['class' => 'form-control'])!!}
                     </div>
-                    @if($errors->has('answer'))
-                    <span class="help-block">{{$errors->first('answer')}}</span>
+                    @if($errors->has('jawaban'))
+                    <span class="help-block">{{$errors->first('jawaban')}}</span>
                     @endif
 
                     <div class="form-group">

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Form;
+use App\Models\FormAdminstrasi;
 use App\Http\Requests;
 
 class FormController extends Controller
@@ -19,7 +19,7 @@ class FormController extends Controller
 
     public function index()
     {
-        $forms = Form::paginate($this->limit);
+        $forms = FormAdminstrasi::paginate($this->limit);
         return view('admin.form.index', compact('forms'));
     }
 
@@ -66,7 +66,7 @@ class FormController extends Controller
      */
     public function edit($id)
     {
-        $form = Form::findOrfail($id);
+        $form = FormAdminstrasi::findOrfail($id);
         return view('admin.form.create', compact('form'));
     }
 
@@ -79,7 +79,7 @@ class FormController extends Controller
      */
     public function update(Requests\FormsRequest $request, $id)
     {
-        $form = Form::findOrfail($id);
+        $form = FormAdminstrasi::findOrfail($id);
         $data = $this->handleRequest($request);
         $form -> update($data);
         return redirect(route('formindex'))->with('message', 'Data Berhasil Diperbaharui');
@@ -93,7 +93,7 @@ class FormController extends Controller
      */
     public function destroy($id)
     {
-        Form::findOrfail($id)->delete();
+        FormAdminstrasi::findOrfail($id)->delete();
         return redirect(route('formindex'))->with('message', 'Data Berhasil Dihapus');
     }
 }
