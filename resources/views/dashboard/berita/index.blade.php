@@ -4,21 +4,20 @@
 
 @include('dashboard.layouts.navbar')
 
-<div style="background-color: rgb(9, 255, 0);">
+<div style="background-color: rgb(110, 60, 26);">
   <div class="container py-5">
     <div class="row align-items-center py-5">
       <div class="col-lg-6">
         @foreach($beritas as $berita)
         <article class="post-item">
             <div class="post-item-image">
-                <a href="{{route('tampil', $berita->id)}}">
-            
+                <a href="{{route('tampil', $berita->id)}}">            
                 </a>
             </div>
             <div class="post-item-body">
                 <div class="padding-10">
                     <h2><a href="{{route('tampil', $berita->id)}}">{{$berita->title}}</a></h2>
-                    <p>{{$berita->excerpt}}</p>
+                    <p> {!! $berita->excerpt !!} </p>
                 </div>
                 <div class="post-meta padding-10 clearfix">
                     <div class="pull-left">

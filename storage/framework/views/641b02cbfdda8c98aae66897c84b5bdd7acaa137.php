@@ -59,7 +59,7 @@
                                 </ul>
                             </div>
 
-                            <p><?php echo e($berita->body); ?></p>
+                            <p><?php echo $berita->body; ?></p>
                         </div>
                     </div>
                 </article>

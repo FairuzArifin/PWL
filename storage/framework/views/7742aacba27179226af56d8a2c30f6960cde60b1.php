@@ -4,7 +4,7 @@
 
 <?php echo $__env->make('dashboard.layouts.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-<div style="background-color: rgb(9, 255, 0);">
+<div style="background-color: rgb(110, 60, 26);">
   <div class="container py-5">
     <div class="row align-items-center py-5">
       <div class="col-lg-6">
@@ -18,7 +18,7 @@
             <div class="post-item-body">
                 <div class="padding-10">
                     <h2><a href="<?php echo e(route('tampil', $berita->id)); ?>"><?php echo e($berita->title); ?></a></h2>
-                    <p><?php echo e($berita->excerpt); ?></p>
+                    <p> <?php echo $berita->excerpt; ?> </p>
                 </div>
                 <div class="post-meta padding-10 clearfix">
                     <div class="pull-left">

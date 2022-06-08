@@ -59,7 +59,7 @@
                                 </ul>
                             </div>
 
-                            <p>{{$berita->body}}</p>
+                            <p>{!! $berita->body !!}</p>
                         </div>
                     </div>
                 </article>
