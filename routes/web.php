@@ -8,6 +8,7 @@ use App\Http\Controllers\FormAdminstrasiController;
 use App\Http\Controllers\Admin\FormController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\pic\FormsController;
+use App\Http\Controllers\pic\UsersController;
 
 
 /*
@@ -40,9 +41,15 @@ Route::get('/dashboard', function() {
 Route::get('/dashboard/formAdminstrasi',[ FormAdminstrasiController::class, 'index']);
 Route::post('/dashboard/formAdminstrasi',[ FormAdminstrasiController::class, 'store']);
 Route::get('/dashboard/listform',[ FormAdminstrasiController::class, 'list']);
+Route::get('/dashboard/berita',[ FormAdminstrasiController::class, 'berita']);
 
 Route::get('/admin',[ AdminViewController::class, 'index']);
 Route::get('/pic',[ AdminViewController::class, 'pic']);
+
+Route::get('tampil/{berita}',[App\Http\Controllers\Admin\Beritacontroller::class, 'tampil'])->name('tampil');
+Route::get('/berita',function(){ 
+    return view('dashboard.berita.tampil');
+});
 
 Route::get('/Admin/berita', [App\Http\Controllers\Admin\Beritacontroller::class, 'index'])->name('beritaindex');
 Route::get('/Admin/berita/create', [App\Http\Controllers\Admin\Beritacontroller::class, 'create'])->name('beritacreate');
@@ -64,6 +71,13 @@ Route::get('/Admin//user/edit/{id}', [App\Http\Controllers\Admin\Usercontroller:
 Route::get('/Admin/user/delete{id}', [App\Http\Controllers\Admin\Usercontroller::class, 'destroy'])->name('userdelete');
 Route::post('/Admin/user/store', [App\Http\Controllers\Admin\Usercontroller::class, 'store'])->name('userstore');
 Route::put('/Admin/user/update/{id}', [App\Http\Controllers\Admin\Usercontroller::class, 'update'])->name('userupdate');
+
+Route::get('/PIC/user', [App\Http\Controllers\PIC\Userscontroller::class, 'index'])->name('usersindex');
+Route::get('/PIC/user/create', [App\Http\Controllers\PIC\Userscontroller::class, 'create'])->name('userscreate');
+Route::get('/PIC/user/edit/{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'edit'])->name('usersedit');
+Route::get('/PIC/user/delete{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'destroy'])->name('usersdelete');
+Route::post('/PIC/user/store', [App\Http\Controllers\PIC\Userscontroller::class, 'store'])->name('usersstore');
+Route::put('/PIC/user/update/{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'update'])->name('usersupdate');
 
 Route::get('/pic/form', [App\Http\Controllers\PIC\Formscontroller::class, 'index'])->name('formsindex');
 Route::get('/pic/create', [App\Http\Controllers\PIC\Formscontroller::class, 'create'])->name('formscreate');

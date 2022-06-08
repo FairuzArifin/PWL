@@ -95,4 +95,12 @@ class BeritaController extends Controller
         Berita::findOrfail($id)->delete();
         return redirect(route('beritaindex'))->with('message', 'Berita Berhasil Dihapus');
     }
+
+    public function tampil($id)
+    {
+        $berita= Berita::findOrFail($id);
+        return view("dashboard.berita.tampil", compact('berita'));
+    }
+
 }
+

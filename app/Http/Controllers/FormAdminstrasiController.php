@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\models\FormAdminstrasi;
+use App\Models\Berita;
 use App\Http\Requests;
 
 class FormAdminstrasiController extends Controller
@@ -21,6 +22,13 @@ class FormAdminstrasiController extends Controller
         $forms = FormAdminstrasi::paginate($this->limit);
         return view('dashboard.formAdminstrasi.listform', compact('forms'));
     }
+    
+    public function berita()
+   {
+       $beritas = Berita::paginate($this->limit);
+       return view('dashboard.berita.index', compact('beritas'));
+   }
+
 
     public function store(Request $request)
     {

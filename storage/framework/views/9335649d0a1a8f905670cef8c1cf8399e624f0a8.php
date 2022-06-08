@@ -11,7 +11,7 @@
               <a class="nav-link" href="/dashboard">Halaman Utama</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Berita dan Pengumuman</a>
+                <a class="nav-link" href="/dashboard/berita">Berita dan Pengumuman</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="/dashboard/formAdminstrasi">Form Administrasi</a>

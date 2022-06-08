@@ -1,6 +1,6 @@
-@extends('layouts.backend.main')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -21,17 +21,18 @@
             <div class="box">
               <div class="box-header">
                 <div class="pull-left">
-                  <a href="{{route('userscreate')}}" class="btn btn-success">Tambahkan User Baru</a>
+                  <a href="<?php echo e(route('userscreate')); ?>" class="btn btn-success">Tambahkan User Baru</a>
                 </div>
               </div>
               <!-- /.box-header -->
               <div class="box-body ">
 
-                @if(session('message'))
+                <?php if(session('message')): ?>
                 <div class="alert alert-info">
-                  {{session('message')}}
+                  <?php echo e(session('message')); ?>
+
                 </div>
-                @endif
+                <?php endif; ?>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -42,21 +43,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($users as $user)
+                            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
                                 <td>
-                                  <a href="{{route('usersedit',$user->id)}}" class="btn btn-xs btn-success">
+                                  <a href="<?php echo e(route('usersedit',$user->id)); ?>" class="btn btn-xs btn-success">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="{{route('usersdelete',$user->id)}}" class="btn btn-xs btn-danger">
+                                <a href="<?php echo e(route('usersdelete',$user->id)); ?>" class="btn btn-xs btn-danger">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->nik}}</td>
-                                    <td>{{$user->level}}</td>
+                                    <td><?php echo e($user->name); ?></td>
+                                    <td><?php echo e($user->nik); ?></td>
+                                    <td><?php echo e($user->level); ?></td>
                                 </td>
                             </tr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </tbody>
                     </table>
               </div>
@@ -64,11 +65,12 @@
               <div class="box-footer">
                   <div class="pull-left">
                     <ul class="pagination no-margin">
-                        {{$users->links("pagination::bootstrap-4")}}
+                        <?php echo e($users->links("pagination::bootstrap-4")); ?>
+
                     </ul>
                   </div>
                   <div class="pull-right">
-                      <small> Jumlah User : {{$users->count()}} dari {{$users->total()}}</small>
+                      <small> Jumlah User : <?php echo e($users->count()); ?> dari <?php echo e($users->total()); ?></small>
                   </div>
               </div>
             </div>
@@ -81,4 +83,5 @@
   </div>
   <!-- /.content-wrapper -->
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.backend.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Lalapel\PWL\resources\views/PIC/user/index.blade.php ENDPATH**/ ?>

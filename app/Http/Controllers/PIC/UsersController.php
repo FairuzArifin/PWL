@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\PIC;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests;
 
-class UserController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +15,14 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    protected $limit = 5;
     
      public function index()
     {
-        $users = User::paginate($this->limit);
-        return view('admin.user.index', compact('users'));
+        return view('PIC.user.index');
+        
+        // [
+        //     'users' => User::where('id', auth()->user()->id)->get()
+        // ]);
     }
 
     /**
@@ -30,7 +32,7 @@ class UserController extends Controller
      */
     public function create(user $user)
     {
-        return view('admin.user.create', compact('user'));
+        return view('PIC.user.create', compact('user'));
     }
 
     /**
@@ -42,7 +44,7 @@ class UserController extends Controller
     public function store(Requests\userRequest $request)
     {
         $request->user()->create($request->all());
-        return redirect(route('userindex'))->with('message', 'User Berhasil Dibuat');
+        return redirect(route('usersindex'))->with('message', 'User Berhasil Dibuat');
     }
 
     /**
@@ -66,7 +68,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::findOrfail($id);
-        return view('admin.user.create', compact('user'));
+        return view('PIC.user.create', compact('user'));
     }
 
     /**
@@ -81,7 +83,7 @@ class UserController extends Controller
         $user = User::findOrfail($id);
         $data = $this->handleRequest($request);
         $user -> update($data);
-        return redirect(route('userindex'))->with('message', 'User Berhasil Diperbaharui');
+        return redirect(route('usersindex'))->with('message', 'User Berhasil Diperbaharui');
     }
 
     /**
@@ -93,6 +95,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::findOrfail($id)->delete();
-        return redirect(route('userindex'))->with('message', 'User Berhasil Dihapus');
+        return redirect(route('usersindex'))->with('message', 'User Berhasil Dihapus');
     }
 }

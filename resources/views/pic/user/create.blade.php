@@ -28,11 +28,11 @@
               
               <div class="box-password ">
                 @if($user->id==null)
-                    {!! Form::model($user, ['route' => 'userstore'])!!}
+                    {!! Form::model($user, ['route' => 'usersstore'])!!}
                 @else
                 {!! Form::model($user, [
                   'method' => 'PUT',
-                  'route' => ['userupdate', $user->id]])!!}
+                  'route' => ['usersupdate', $user->id]])!!}
                 @endif
 
                     <div class="form-group {{$errors->has('nik')?'has-error' : ''}}">

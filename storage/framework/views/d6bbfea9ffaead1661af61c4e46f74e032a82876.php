@@ -67,6 +67,17 @@
                     <span class="help-block"><?php echo e($errors->first('deskripsi')); ?></span>
                     <?php endif; ?>
 
+                    <br>
+                    <div class="form-group <?php echo e($errors->has('status')?'has-error' : ''); ?>">
+                      <?php echo Form::label('Status : '); ?>
+
+                      <?php echo Form::text('status', null, ['value' => 'form-control', 'readonly']); ?>
+
+                      <?php if($errors->has('status')): ?>
+                      <span class="help-block"><?php echo e($errors->first('status')); ?></span>
+                    <?php endif; ?>
+                    <br><br>
+
                     <div class="form-group <?php echo e($errors->has('PIC')?'has-error' : ''); ?>">
                       <?php echo Form::label('PIC', 'Diteruskan ke : '); ?>
 
