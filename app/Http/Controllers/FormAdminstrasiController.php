@@ -22,6 +22,7 @@ class FormAdminstrasiController extends Controller
            'no_hp' => 'required',
            'judul' => 'required',
            'deskripsi' => 'required',
+           'status'=> 'Diproses',
            'PIC' => '',
            'jawaban' => '', 
        ]);
