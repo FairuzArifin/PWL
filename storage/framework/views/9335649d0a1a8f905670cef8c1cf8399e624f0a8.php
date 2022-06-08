@@ -17,7 +17,7 @@
               <a class="nav-link" href="/dashboard/formAdminstrasi">Form Administrasi</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">List Administrasi Warga</a>
+              <a class="nav-link" href="/dashboard/listform">List Administrasi Warga</a>
             </li>
                   <li class="nav-item active">
                     <a class="nav-link" href="#" style="color: rgb(51, 255, 0)">

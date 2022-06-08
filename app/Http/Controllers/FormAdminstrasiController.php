@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\models\FormAdminstrasi;
+use App\Http\Requests;
 
 class FormAdminstrasiController extends Controller
 {
@@ -12,6 +14,11 @@ class FormAdminstrasiController extends Controller
         return view('dashboard.formAdminstrasi.index');
     }
 
+    public function list()
+    {
+        $forms = FormAdminstrasi::paginate($this->limit);
+        return view('dashboard.formAdminstrasi.listform', compact('forms'));
+    }
 
     public function store(Request $request)
     {

@@ -37,6 +37,7 @@ Route::get('/dashboard', function() {
 
 Route::get('/dashboard/formAdminstrasi',[ FormAdminstrasiController::class, 'index']);
 Route::post('/dashboard/formAdminstrasi',[ FormAdminstrasiController::class, 'store']);
+Route::get('/dashboard/listform',[ FormAdminstrasiController::class, 'list']);
 
 Route::get('/admin',[ AdminViewController::class, 'index']);
 

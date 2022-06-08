@@ -1,12 +1,15 @@
-@extends('home.main')
+@extends('dashboard.layouts.main')
 
 @section('content')
 
-@include('home.navbar')
+@include('dashboard.layouts.navbar')
 
-<div class="content-body">
 
-            
+<div class="login-form-bg">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-xl-12 ">
+{{--  --}}
             <div class="container-fluid">
                 <div class="row" id="populer">
                     <div class="col-lg-12">
@@ -34,7 +37,33 @@
                                             <tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($forms as $form)
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>{{$form->judul}}</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            <tr>
+                                            @endforeach
+                                        </tbody>
                                     </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+           </div>
+        </div>
+{{--  --}}
+</div>
+</div>
+</div>
+</div>
 
-
-@include('home.footer')
+@include('dashboard.layouts.footer')
