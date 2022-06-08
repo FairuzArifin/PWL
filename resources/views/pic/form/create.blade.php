@@ -28,11 +28,11 @@
               
               <div class="box-body ">
                 @if($form->id==null)
-                    {!! Form::model($form, ['route' => 'formstore'])!!}
+                    {!! Form::model($form, ['route' => 'formsstore'])!!}
                 @else
                 {!! Form::model($form, [
                   'method' => 'PUT',
-                  'route' => ['formupdate', $form->id]])!!}
+                  'route' => ['formsupdate', $form->id]])!!}
                 @endif
 
                     <div class="form-group {{$errors->has('jenis')?'has-error' : ''}}">

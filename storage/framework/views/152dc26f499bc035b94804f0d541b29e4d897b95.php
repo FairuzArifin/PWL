@@ -47,10 +47,10 @@
                             <?php $__currentLoopData = $forms; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $form): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
                                 <td>
-                                  <a href="<?php echo e(route('formedit',$form->id)); ?>" class="btn btn-xs btn-success">
+                                  <a href="<?php echo e(route('formsedit',$form->id)); ?>" class="btn btn-xs btn-success">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="<?php echo e(route('formdelete',$form->id)); ?>" class="btn btn-xs btn-danger">
+                                <a href="<?php echo e(route('formsdelete',$form->id)); ?>" class="btn btn-xs btn-danger">
                                     <i class="fa fa-trash"></i>
                                 </a>
                                     <td><?php echo e($form->judul); ?></td>

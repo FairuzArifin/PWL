@@ -46,10 +46,10 @@
                             @foreach($forms as $form)
                             <tr>
                                 <td>
-                                  <a href="{{route('formedit',$form->id)}}" class="btn btn-xs btn-success">
+                                  <a href="{{route('formsedit',$form->id)}}" class="btn btn-xs btn-success">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="{{route('formdelete',$form->id)}}" class="btn btn-xs btn-danger">
+                                <a href="{{route('formsdelete',$form->id)}}" class="btn btn-xs btn-danger">
                                     <i class="fa fa-trash"></i>
                                 </a>
                                     <td>{{$form->judul}}</td>

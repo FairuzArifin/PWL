@@ -82,7 +82,7 @@ class FormsController extends Controller
         $form = FormAdminstrasi::findOrfail($id);
         $data = $this->handleRequest($request);
         $form -> update($data);
-        return redirect(route('formindex'))->with('message', 'Data Berhasil Diperbaharui');
+        return redirect(route('formsindex'))->with('message', 'Data Berhasil Diperbaharui');
     }
 
     /**
@@ -94,6 +94,6 @@ class FormsController extends Controller
     public function destroy($id)
     {
         FormAdminstrasi::findOrfail($id)->delete();
-        return redirect(route('formindex'))->with('message', 'Data Berhasil Dihapus');
+        return redirect(route('formisndex'))->with('message', 'Data Berhasil Dihapus');
     }
 }

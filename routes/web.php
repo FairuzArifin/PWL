@@ -65,12 +65,12 @@ Route::get('/Admin/user/delete{id}', [App\Http\Controllers\Admin\Usercontroller:
 Route::post('/Admin/user/store', [App\Http\Controllers\Admin\Usercontroller::class, 'store'])->name('userstore');
 Route::put('/Admin/user/update/{id}', [App\Http\Controllers\Admin\Usercontroller::class, 'update'])->name('userupdate');
 
-Route::get('/pic/form', [App\Http\Controllers\PIC\Formscontroller::class, 'index'])->name('formindex');
-Route::get('/pic/create', [App\Http\Controllers\PIC\Formscontroller::class, 'create'])->name('formcreate');
-Route::get('/pic/edit/{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'edit'])->name('formedit');
-Route::get('/pic/delete{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'destroy'])->name('formdelete');
-Route::post('/pic/store', [App\Http\Controllers\PIC\Formscontroller::class, 'store'])->name('formstore');
-Route::put('/pic/update/{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'update'])->name('formupdate');
+Route::get('/pic/form', [App\Http\Controllers\PIC\Formscontroller::class, 'index'])->name('formsindex');
+Route::get('/pic/create', [App\Http\Controllers\PIC\Formscontroller::class, 'create'])->name('formscreate');
+Route::get('/pic/edit/{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'edit'])->name('formsedit');
+Route::get('/pic/delete{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'destroy'])->name('formsdelete');
+Route::post('/pic/store', [App\Http\Controllers\PIC\Formscontroller::class, 'store'])->name('formsstore');
+Route::put('/pic/update/{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'update'])->name('formsupdate');
 //Route::get('/register', function () {
     //return view('register');
 //});

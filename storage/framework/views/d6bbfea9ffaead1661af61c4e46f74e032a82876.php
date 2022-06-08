@@ -28,12 +28,12 @@
               
               <div class="box-body ">
                 <?php if($form->id==null): ?>
-                    <?php echo Form::model($form, ['route' => 'formstore']); ?>
+                    <?php echo Form::model($form, ['route' => 'formsstore']); ?>
 
                 <?php else: ?>
                 <?php echo Form::model($form, [
                   'method' => 'PUT',
-                  'route' => ['formupdate', $form->id]]); ?>
+                  'route' => ['formsupdate', $form->id]]); ?>
 
                 <?php endif; ?>
 
