@@ -30,7 +30,7 @@ class FormAdminstrasiController extends Controller
 
        FormAdminstrasi::create($validatedData);
 
-       return redirect('dashbord/');
+       return redirect('dashboard/');
     }
 }
 
