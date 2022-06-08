@@ -56,6 +56,13 @@ Route::get('/Admin/delete{id}', [App\Http\Controllers\Admin\Formcontroller::clas
 Route::post('/Admin/store', [App\Http\Controllers\Admin\Formcontroller::class, 'store'])->name('formstore');
 Route::put('/Admin/update/{id}', [App\Http\Controllers\Admin\Formcontroller::class, 'update'])->name('formupdate');
 
+Route::get('/Admin/user', [App\Http\Controllers\Admin\Usercontroller::class, 'index'])->name('userindex');
+Route::get('/Admin/user/create', [App\Http\Controllers\Admin\Usercontroller::class, 'create'])->name('usercreate');
+Route::get('/Admin//user/edit/{id}', [App\Http\Controllers\Admin\Usercontroller::class, 'edit'])->name('useredit');
+Route::get('/Admin/user/delete{id}', [App\Http\Controllers\Admin\Usercontroller::class, 'destroy'])->name('userdelete');
+Route::post('/Admin/user/store', [App\Http\Controllers\Admin\Usercontroller::class, 'store'])->name('userstore');
+Route::put('/Admin/user/update/{id}', [App\Http\Controllers\Admin\Usercontroller::class, 'update'])->name('userupdate');
+
 //Route::get('/register', function () {
     //return view('register');
 //});

@@ -23,19 +23,6 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-pencil"></i>
-            <span>Berita</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo e(route('beritaindex')); ?>"><i class="fa fa-circle-o"></i> List Berita</a></li>
-            
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pencil"></i>
             <span>Form</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -43,7 +30,33 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo e(route('formindex')); ?>"><i class="fa fa-circle-o"></i> List Pertanyaan</a></li>
-            <li><a href="<?php echo e(route('formcreate')); ?>"><i class="fa fa-circle-o"></i> Edit Pertanyaan</a></li>
+            
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pencil"></i>
+            <span>User</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo e(route('userindex')); ?>"><i class="fa fa-circle-o"></i> List User</a></li>
+            
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pencil"></i>
+            <span>Berita</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo e(route('beritaindex')); ?>"><i class="fa fa-circle-o"></i> List Berita</a></li>
+            <li><a href="<?php echo e(route('beritacreate')); ?>"><i class="fa fa-circle-o"></i> Buat Berita</a></li>
           </ul>
         </li>
       </ul>
