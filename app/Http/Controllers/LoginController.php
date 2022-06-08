@@ -24,7 +24,13 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/dashboard');
+
+            if(Auth::user()->level === "Warga" ) {
+                return redirect()->intended('/dashboard');
+            } elseif (Auth::user()->level === "Admin") {
+                return redirect()->intended('/admin');
+            }
+            
 
         }
 
