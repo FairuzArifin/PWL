@@ -25,14 +25,14 @@ class BeritaRequest extends FormRequest
     {
         $rules = [
             'title' => 'required',
-            'slug' => 'required|unique:posts',
+            'slug' => 'required|unique:beritas',
             'excerpt' => 'required',
             'body' => 'required',
             //
         ];
 
         switch($this->method()){
-            case 'PUT' : $rules['slug'] = 'required' . $this->route('blogedit');
+            case 'PUT' : $rules['slug'] = 'required' . $this->route('beritaedit');
             break;
         }
         return $rules;

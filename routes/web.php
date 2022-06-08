@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminViewController;
 use App\Http\Controllers\FormAdminstrasiController;
 use App\Http\Controllers\Admin\FormController;
+use App\Http\Controllers\Admin\BeritaController;
 
 
 /*
@@ -42,11 +43,11 @@ Route::get('/dashboard/listform',[ FormAdminstrasiController::class, 'list']);
 Route::get('/admin',[ AdminViewController::class, 'index']);
 
 Route::get('/Admin/berita', [App\Http\Controllers\Admin\Beritacontroller::class, 'index'])->name('beritaindex');
-Route::get('/Admin/create', [App\Http\Controllers\Admin\Beritacontroller::class, 'create'])->name('beritacreate');
-Route::get('/Admin/edit/{id}', [App\Http\Controllers\Admin\Beritacontroller::class, 'edit'])->name('beritaedit');
-Route::get('/Admin/delete{id}', [App\Http\Controllers\Admin\Beritacontroller::class, 'destroy'])->name('beritadelete');
-Route::post('/Admin/store', [App\Http\Controllers\Admin\Beritacontroller::class, 'store'])->name('beritastore');
-Route::put('/Admin/update/{id}', [App\Http\Controllers\Admin\Beritacontroller::class, 'update'])->name('beritaupdate');
+Route::get('/Admin/berita/create', [App\Http\Controllers\Admin\Beritacontroller::class, 'create'])->name('beritacreate');
+Route::get('/Admin//berita/edit/{id}', [App\Http\Controllers\Admin\Beritacontroller::class, 'edit'])->name('beritaedit');
+Route::get('/Admin/berita/delete{id}', [App\Http\Controllers\Admin\Beritacontroller::class, 'destroy'])->name('beritadelete');
+Route::post('/Admin/berita/store', [App\Http\Controllers\Admin\Beritacontroller::class, 'store'])->name('beritastore');
+Route::put('/Admin/berita/update/{id}', [App\Http\Controllers\Admin\Beritacontroller::class, 'update'])->name('beritaupdate');
 
 Route::get('/Admin/form', [App\Http\Controllers\Admin\Formcontroller::class, 'index'])->name('formindex');
 Route::get('/Admin/create', [App\Http\Controllers\Admin\Formcontroller::class, 'create'])->name('formcreate');

@@ -19,8 +19,8 @@ class BeritaController extends Controller
     
      public function index()
     {
-        $posts = Berita::paginate($this->limit);
-        return view('admin.berita.index', compact('forms'));
+        $beritas = Berita::paginate($this->limit);
+        return view('admin.berita.index', compact('beritas'));
     }
 
     /**
@@ -28,9 +28,9 @@ class BeritaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Berita $post)
+    public function create(Berita $berita)
     {
-        return view('admin.berita.create', compact('post'));
+        return view('admin.berita.create', compact('berita'));
     }
 
     /**
@@ -42,7 +42,7 @@ class BeritaController extends Controller
     public function store(Requests\BeritaRequest $request)
     {
         $request->user()->posts()->create($request->all());
-        return redirect('/admin/berita')->with('message', 'Data Berhasil Disimpan');
+        return redirect(route('beritaindex'))->with('message', 'Berita Berhasil Dibuat');
     }
 
     /**
@@ -65,8 +65,8 @@ class BeritaController extends Controller
      */
     public function edit($id)
     {
-        $post = Berita::findOrfail($id);
-        return view('admin.berita.create', compact('post'));
+        $berita = Berita::findOrfail($id);
+        return view('admin.berita.create', compact('berita'));
     }
 
     /**
@@ -78,10 +78,10 @@ class BeritaController extends Controller
      */
     public function update(Requests\BeritaRequest $request, $id)
     {
-        $post = Berita::findOrfail($id);
+        $berita = Berita::findOrfail($id);
         $data = $this->handleRequest($request);
-        $post -> update($data);
-        return redirect(route('beritaindex'))->with('message', 'Data Berhasil Diperbaharui');
+        $berita -> update($data);
+        return redirect(route('beritaindex'))->with('message', 'Berita Berhasil Diperbaharui');
     }
 
     /**
@@ -93,6 +93,6 @@ class BeritaController extends Controller
     public function destroy($id)
     {
         Berita::findOrfail($id)->delete();
-        return redirect(route('beritaindex'))->with('message', 'Data Berhasil Dihapus');
+        return redirect(route('beritaindex'))->with('message', 'Berita Berhasil Dihapus');
     }
 }

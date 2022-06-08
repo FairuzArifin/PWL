@@ -7,7 +7,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        @if($post->id==null)
+        @if($berita->id==null)
         Berita Baru
         @else
         Update Berita
@@ -27,12 +27,12 @@
               <!-- /.box-header -->
               
               <div class="box-body ">
-                @if($post->id==null)
-                    {!! Form::model($post, ['route' => 'beritastore'])!!}
+                @if($berita->id==null)
+                    {!! Form::model($berita, ['route' => 'beritastore'])!!}
                 @else
-                {!! Form::model($post, [
+                {!! Form::model($berita, [
                   'method' => 'PUT',
-                  'route' => ['beritaupdate', $post->id]])!!}
+                  'route' => ['beritaupdate', $berita->id]])!!}
                 @endif
 
                     <div class="form-group {{$errors->has('title')?'has-error' : ''}}">
