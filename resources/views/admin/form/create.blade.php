@@ -37,7 +37,7 @@
 
                     <div class="form-group {{$errors->has('judul')?'has-error' : ''}}">
                         {!! Form::label('judul')!!}
-                        {!! Form::text('judul', null, ['class' => 'form-control'])!!}
+                        {!! Form::text('judul', null, ['class' => 'form-control' ,'disabled',])!!}
                     </div>
                     @if($errors->has('judul'))
                     <span class="help-block">{{$errors->first('judul')}}</span>
@@ -45,31 +45,31 @@
                     
                     <div class="form-group {{$errors->has('deskripsi')?'has-error' : ''}}">
                         {!! Form::label('deskripsi')!!}
-                        {!! Form::textarea('deskripsi', null, ['class' => 'form-control'])!!}
+                        {!! Form::textarea('deskripsi', null, ['class' => 'form-control','disabled',])!!}
                     </div>
                     @if($errors->has('deskripsi'))
                     <span class="help-block">{{$errors->first('deskripsi')}}</span>
                     @endif
 
                     <div class="form-group {{$errors->has('status')?'has-error' : ''}}">
-                    {!! Form::label('status')!!}
-                    {!! Form::checkbox('status', 'selesai', true, ['class' => 'form-control'])!!}
+                    {!! Form::label('Status : ')!!}
+                    {!! Form::select('status', array('Diproses','Selesai'), ['class' => 'form-control'])!!}
                     </div>
                     @if($errors->has('status'))
                     <span class="help-block">{{$errors->first('status')}}</span>
                     @endif
 
-                    <div class="form-group {{$errors->has('pic')?'has-error' : ''}}">
-                      {!! Form::label('pic', 'Diteruskan ke : ') !!}
-                      {!! Form::select('pic', $pic, null, ['class' => 'form-control']) !!}
+                    <div class="form-group {{$errors->has('PIC')?'has-error' : ''}}">
+                      {!! Form::label('PIC', 'Diteruskan ke : ') !!}
+                      {!! Form::text('PIC', null, ['class' => 'form-control'])!!}
                     </div>
-                    @if($errors->has('pic'))
-                    <span class="help-block">{{$errors->first('pic')}}</span>
+                    @if($errors->has('PIC'))
+                    <span class="help-block">{{$errors->first('PIC')}}</span>
                     @endif
 
                     <div class="form-group {{$errors->has('jawaban')?'has-error' : ''}}">
                       {!! Form::label('jawaban')!!}
-                      {!! Form::textarea('jawaban', null, ['class' => 'form-control'])!!}
+                      {!! Form::textarea('jawaban', null, ['class' => 'form-control','disabled'])!!}
                     </div>
                     @if($errors->has('jawaban'))
                     <span class="help-block">{{$errors->first('jawaban')}}</span>
@@ -80,14 +80,7 @@
                     </div>
                     {!! Form::close()!!}
                     
-                    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-                    <script>
-                      tinymce.init({
-                        selector: 'textarea.form-control',
-                        width: 900,
-                        height: 300
-                      });
-                    </script>
+            
               </div>
               <!-- /.box-body -->
               

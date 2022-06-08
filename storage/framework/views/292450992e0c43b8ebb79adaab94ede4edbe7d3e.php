@@ -40,7 +40,7 @@
                     <div class="form-group <?php echo e($errors->has('judul')?'has-error' : ''); ?>">
                         <?php echo Form::label('judul'); ?>
 
-                        <?php echo Form::text('judul', null, ['class' => 'form-control']); ?>
+                        <?php echo Form::text('judul', null, ['class' => 'form-control' ,'disabled',]); ?>
 
                     </div>
                     <?php if($errors->has('judul')): ?>
@@ -50,7 +50,7 @@
                     <div class="form-group <?php echo e($errors->has('deskripsi')?'has-error' : ''); ?>">
                         <?php echo Form::label('deskripsi'); ?>
 
-                        <?php echo Form::textarea('deskripsi', null, ['class' => 'form-control']); ?>
+                        <?php echo Form::textarea('deskripsi', null, ['class' => 'form-control','disabled',]); ?>
 
                     </div>
                     <?php if($errors->has('deskripsi')): ?>
@@ -58,29 +58,29 @@
                     <?php endif; ?>
 
                     <div class="form-group <?php echo e($errors->has('status')?'has-error' : ''); ?>">
-                    <?php echo Form::label('status'); ?>
+                    <?php echo Form::label('Status : '); ?>
 
-                    <?php echo Form::checkbox('status', 'selesai', true, ['class' => 'form-control']); ?>
+                    <?php echo Form::select('status', array('Diproses','Selesai'), ['class' => 'form-control']); ?>
 
                     </div>
                     <?php if($errors->has('status')): ?>
                     <span class="help-block"><?php echo e($errors->first('status')); ?></span>
                     <?php endif; ?>
 
-                    <div class="form-group <?php echo e($errors->has('pic')?'has-error' : ''); ?>">
-                      <?php echo Form::label('pic', 'Diteruskan ke : '); ?>
+                    <div class="form-group <?php echo e($errors->has('PIC')?'has-error' : ''); ?>">
+                      <?php echo Form::label('PIC', 'Diteruskan ke : '); ?>
 
-                      <?php echo Form::select('pic', $pic, null, ['class' => 'form-control']); ?>
+                      <?php echo Form::text('PIC', null, ['class' => 'form-control']); ?>
 
                     </div>
-                    <?php if($errors->has('pic')): ?>
-                    <span class="help-block"><?php echo e($errors->first('pic')); ?></span>
+                    <?php if($errors->has('PIC')): ?>
+                    <span class="help-block"><?php echo e($errors->first('PIC')); ?></span>
                     <?php endif; ?>
 
                     <div class="form-group <?php echo e($errors->has('jawaban')?'has-error' : ''); ?>">
                       <?php echo Form::label('jawaban'); ?>
 
-                      <?php echo Form::textarea('jawaban', null, ['class' => 'form-control']); ?>
+                      <?php echo Form::textarea('jawaban', null, ['class' => 'form-control','disabled']); ?>
 
                     </div>
                     <?php if($errors->has('jawaban')): ?>
@@ -94,14 +94,7 @@
                     <?php echo Form::close(); ?>
 
                     
-                    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-                    <script>
-                      tinymce.init({
-                        selector: 'textarea.form-control',
-                        width: 900,
-                        height: 300
-                      });
-                    </script>
+            
               </div>
               <!-- /.box-body -->
               
