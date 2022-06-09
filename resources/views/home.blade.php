@@ -51,27 +51,27 @@
     </div>
     <div class="row text-center">
       <div class="col">
-        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="anhar.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="img/anhar.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">Anhar</h5><span class="small text-uppercase text-muted">Ketua Kelompok</span>
         </div>
       </div>
       <div class="col">
-        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="fairuz.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="img/fairus.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">Fairuz</h5><span class="small text-uppercase text-muted">Anggota Kelompok</span>
         </div>
       </div>
       <div class="col">
-        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="putri.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="img/putri.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">Putri</h5><span class="small text-uppercase text-muted">Anggota Kelompok</span>
         </div>
       </div>
       <div class="col">
-        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="recindy.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="img/recindy.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">Recindy</h5><span class="small text-uppercase text-muted">Anggota Kelompokr</span>
         </div>
       </div>
       <div class="col">
-        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="vincent.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="background-color:rgb(107, 252, 102)"><img src="img/vincent.jpeg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">Vincent</h5><span class="small text-uppercase text-muted">Anggota Kelompok</span>
         </div>
       </div>
