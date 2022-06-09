@@ -25,8 +25,8 @@
                     <p class="lead text-muted">Halo PIC {{Auth::user()->name}}, Selamat Datang</p>
 
                     <h4>Pilihan</h4>
-                    <p><a href="#" class="btn btn-primary">Edit Akun </a></p>
-                    <p><a href="#" class="btn btn-primary">List Pertanyaan</a></p>
+                    <p><a href="{{route('usersindex')}}" class="btn btn-primary">Edit Akun </a></p>
+                    <p><a href="{{route('formsindex')}}" class="btn btn-primary">List Pertanyaan</a></p>
               </div>
               <!-- /.box-body -->
             </div>

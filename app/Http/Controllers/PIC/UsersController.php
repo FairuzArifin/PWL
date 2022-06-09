@@ -14,16 +14,26 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
+    protected $limit = 5;
     
      public function index()
     {
-        return view('PIC.user.index');
-        
-        // [
-        //     'users' => User::where('id', auth()->user()->id)->get()
-        // ]);
+        $users = User::paginate($this->limit);
+        return view('PIC.user.index', compact('users'));
+
     }
+    
+//     public function index()
+//    {
+//         return view('PIC.user.index', [
+//            'user' => User::where('id', auth()->user()->id)->get() ,
+    
+//        ]);
+       
+//        // [
+//        //     'users' => User::where('id', auth()->user()->id)->get()
+//        // ]);
+//    }
 
     /**
      * Show the form for creating a new resource.
@@ -33,7 +43,7 @@ class UsersController extends Controller
     public function create(user $user)
     {
         return view('PIC.user.create', compact('user'));
-    }
+    } 
 
     /**
      * Store a newly created resource in storage.

@@ -25,9 +25,9 @@
                     <p class="lead text-muted">Halo Admin {{Auth::user()->name}}, Selamat Datang</p>
 
                     <h4>Pilihan</h4>
-                    <p><a href="#" class="btn btn-primary">List Berita</a></p>
-                    <p><a href="#" class="btn btn-primary">List Akun Terdaftar</a></p>
-                    <p><a href="#" class="btn btn-primary">List Pertanyaan</a></p>
+                    <p><a href="{{route('beritaindex')}}" class="btn btn-primary">List Berita</a></p>
+                    <p><a href="{{route('userindex')}}" class="btn btn-primary">List Akun Terdaftar</a></p>
+                    <p><a href="{{route('formindex')}}" class="btn btn-primary">List Pertanyaan</a></p>
               </div>
               <!-- /.box-body -->
             </div>

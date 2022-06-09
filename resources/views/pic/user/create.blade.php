@@ -59,6 +59,7 @@
                     <span class="help-block">{{$errors->first('email')}}</span>
                     @endif
                     
+                    <div style="visibility: hidden">
                     <div class="form-group {{$errors->has('password')?'has-error' : ''}}">
                         {!! Form::label('password')!!}
                         {!! Form::text('password', null, ['class' => 'form-control'])!!}
@@ -70,14 +71,15 @@
                     <div class="form-group {{$errors->has('level')?'has-error' : ''}}">
                       {!! Form::label('Level : ')!!}
                       <select name="level">
-                        <option value="Admin" selected>Admin</option>
-                        <option value="PIC">PIC</option>
+                        <option value="Admin">Admin</option>
+                        <option value="PIC" selected>PIC</option>
                         <option value="Warga">Warga</option>
                       </select>
                       </div>
                       @if($errors->has('level'))
                       <span class="help-block">{{$errors->first('level')}}</span>
                       @endif
+                    </div>
 
                     <div class="form-group">
                         {!! Form::submit('Save', ['class' => 'form-control'])!!}

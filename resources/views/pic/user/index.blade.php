@@ -42,37 +42,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($users as $user)
                             <tr>
                                 <td>
-                                  <a href="{{route('usersedit',$user->id)}}" class="btn btn-xs btn-success">
+                                  <a href="{{route('usersedit',Auth::user()->id)}}" class="btn btn-xs btn-success">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="{{route('usersdelete',$user->id)}}" class="btn btn-xs btn-danger">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->nik}}</td>
-                                    <td>{{$user->level}}</td>
+                                    <td> {{Auth::user()->name}}</td>
+                                    <td> {{Auth::user()->nik}}</td>
+                                    <td> {{Auth::user()->level}}</td>
                                 </td>
                             </tr>
-                            @endforeach
                         </tbody>
                     </table>
               </div>
-              <!-- /.box-body -->
-              <div class="box-footer">
-                  <div class="pull-left">
-                    <ul class="pagination no-margin">
-                        {{$users->links("pagination::bootstrap-4")}}
-                    </ul>
-                  </div>
-                  <div class="pull-right">
-                      <small> Jumlah User : {{$users->count()}} dari {{$users->total()}}</small>
-                  </div>
-              </div>
-            </div>
-            <!-- /.box -->
           </div>
         </div>
       <!-- ./row -->

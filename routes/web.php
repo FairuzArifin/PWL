@@ -72,12 +72,12 @@ Route::get('/Admin/user/delete{id}', [App\Http\Controllers\Admin\Usercontroller:
 Route::post('/Admin/user/store', [App\Http\Controllers\Admin\Usercontroller::class, 'store'])->name('userstore');
 Route::put('/Admin/user/update/{id}', [App\Http\Controllers\Admin\Usercontroller::class, 'update'])->name('userupdate');
 
-Route::get('/PIC/user', [App\Http\Controllers\PIC\Userscontroller::class, 'index'])->name('usersindex');
-Route::get('/PIC/user/create', [App\Http\Controllers\PIC\Userscontroller::class, 'create'])->name('userscreate');
-Route::get('/PIC/user/edit/{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'edit'])->name('usersedit');
-Route::get('/PIC/user/delete{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'destroy'])->name('usersdelete');
-Route::post('/PIC/user/store', [App\Http\Controllers\PIC\Userscontroller::class, 'store'])->name('usersstore');
-Route::put('/PIC/user/update/{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'update'])->name('usersupdate');
+Route::get('/pic/user', [App\Http\Controllers\PIC\Userscontroller::class, 'index'])->name('usersindex')->middleware('auth');
+Route::get('/pic/user/create', [App\Http\Controllers\PIC\Userscontroller::class, 'create'])->name('userscreate');
+Route::get('/pic/user/edit/{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'edit'])->name('usersedit');
+Route::get('/pic/user/delete{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'destroy'])->name('usersdelete');
+Route::post('/pic/user/store', [App\Http\Controllers\PIC\Userscontroller::class, 'store'])->name('usersstore');
+Route::put('/pic/user/update/{id}', [App\Http\Controllers\PIC\Userscontroller::class, 'update'])->name('usersupdate');
 
 Route::get('/pic/form', [App\Http\Controllers\PIC\Formscontroller::class, 'index'])->name('formsindex');
 Route::get('/pic/create', [App\Http\Controllers\PIC\Formscontroller::class, 'create'])->name('formscreate');

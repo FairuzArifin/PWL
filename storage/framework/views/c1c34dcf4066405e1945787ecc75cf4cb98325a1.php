@@ -67,6 +67,7 @@
                     <span class="help-block"><?php echo e($errors->first('email')); ?></span>
                     <?php endif; ?>
                     
+                    <div style="visibility: hidden">
                     <div class="form-group <?php echo e($errors->has('password')?'has-error' : ''); ?>">
                         <?php echo Form::label('password'); ?>
 
@@ -81,14 +82,15 @@
                       <?php echo Form::label('Level : '); ?>
 
                       <select name="level">
-                        <option value="Admin" selected>Admin</option>
-                        <option value="PIC">PIC</option>
+                        <option value="Admin">Admin</option>
+                        <option value="PIC" selected>PIC</option>
                         <option value="Warga">Warga</option>
                       </select>
                       </div>
                       <?php if($errors->has('level')): ?>
                       <span class="help-block"><?php echo e($errors->first('level')); ?></span>
                       <?php endif; ?>
+                    </div>
 
                     <div class="form-group">
                         <?php echo Form::submit('Save', ['class' => 'form-control']); ?>

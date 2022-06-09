@@ -43,38 +43,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
                                 <td>
-                                  <a href="<?php echo e(route('usersedit',$user->id)); ?>" class="btn btn-xs btn-success">
+                                  <a href="<?php echo e(route('usersedit',Auth::user()->id)); ?>" class="btn btn-xs btn-success">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="<?php echo e(route('usersdelete',$user->id)); ?>" class="btn btn-xs btn-danger">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                                    <td><?php echo e($user->name); ?></td>
-                                    <td><?php echo e($user->nik); ?></td>
-                                    <td><?php echo e($user->level); ?></td>
+                                    <td> <?php echo e(Auth::user()->name); ?></td>
+                                    <td> <?php echo e(Auth::user()->nik); ?></td>
+                                    <td> <?php echo e(Auth::user()->level); ?></td>
                                 </td>
                             </tr>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </tbody>
                     </table>
               </div>
-              <!-- /.box-body -->
-              <div class="box-footer">
-                  <div class="pull-left">
-                    <ul class="pagination no-margin">
-                        <?php echo e($users->links("pagination::bootstrap-4")); ?>
-
-                    </ul>
-                  </div>
-                  <div class="pull-right">
-                      <small> Jumlah User : <?php echo e($users->count()); ?> dari <?php echo e($users->total()); ?></small>
-                  </div>
-              </div>
-            </div>
-            <!-- /.box -->
           </div>
         </div>
       <!-- ./row -->
