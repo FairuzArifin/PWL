@@ -40,20 +40,18 @@
 </div>
 </div>
 
-<div class="container">
+{{-- <div class="container">
     <div class="row">
-        <div class="col-md-8">
-            
-           
+        <div class="col-md-8">        
             <nav>
               <ul class="pager">
                 <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Newer</a></li>
                 <li class="next"><a href="#">Older <span aria-hidden="true">&rarr;</span></a></li>
               </ul>
             </nav>
-        </div>
-  
-    </div>
+        </div> 
+    </div>--}}
+</div>
 </div>
 
 @include('dashboard.layouts.footer')

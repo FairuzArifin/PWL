@@ -11,8 +11,7 @@
         <?php $__currentLoopData = $beritas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $berita): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <article class="post-item">
             <div class="post-item-image">
-                <a href="<?php echo e(route('tampil', $berita->id)); ?>">
-            
+                <a href="<?php echo e(route('tampil', $berita->id)); ?>">            
                 </a>
             </div>
             <div class="post-item-body">
@@ -41,20 +40,8 @@
 </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            
-           
-            <nav>
-              <ul class="pager">
-                <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Newer</a></li>
-                <li class="next"><a href="#">Older <span aria-hidden="true">&rarr;</span></a></li>
-              </ul>
-            </nav>
-        </div>
-  
-    </div>
+
+</div>
 </div>
 
 <?php echo $__env->make('dashboard.layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
