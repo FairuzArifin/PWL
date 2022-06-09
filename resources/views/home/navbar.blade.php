@@ -7,12 +7,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Halaman Utama</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Berita dan Pengumuman</a>
-            </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="/login" style="color: rgb(51, 255, 0)">Masuk</a>
                 </li>

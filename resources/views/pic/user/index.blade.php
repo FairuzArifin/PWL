@@ -7,7 +7,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        List User
+        Data Diri PIC
       </h1>
       <ol class="breadcrumb">
         <li class="active"><i class="fa fa-dashboard"></i> Data User</li>
@@ -20,9 +20,6 @@
           <div class="col-xs-12">
             <div class="box">
               <div class="box-header">
-                <div class="pull-left">
-                  <a href="{{route('userscreate')}}" class="btn btn-success">Tambahkan User Baru</a>
-                </div>
               </div>
               <!-- /.box-header -->
               <div class="box-body ">
