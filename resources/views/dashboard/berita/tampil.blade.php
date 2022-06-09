@@ -6,31 +6,20 @@
 
 <div style="background-color: rgb(9, 255, 0);">
     <div class="container py-5">
-      <div class="row align-items-center py-5">
-
-                        <article class="post-item post-detail">
-                            <div class="post-item-image">
-                                <a href="#">
-                                    <img src="img/Post_Image_1.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="post-item-body">
-                                <div class="padding-10">
-                                    <h1>{{$berita->title}}</h1>
-
-                                    <div class="post-meta no-border">
-                                        <ul class="post-meta-group">
-                                            <li><i class="fa fa-user"></i><a href="#"> {{$berita->author->name}}</a></li>
-                                            <li><i class="fa fa-clock-o"></i><time>  {{$berita->created_at}}</time></li>
-                                            <li><i class="fa fa-tags"></i><a href="#"> Berita</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <p>{!! $berita->body !!}</p>
-                                </div>
-                            </div>
-                        </article>
+    <button type="button" id="sidebarCollapse" class="btn btn-info" onclick="history.back()">Kembali</button>
+        <article class="post-item post-detail">
+            <div class="post-item-body">
+                <div class="padding-10" align="center">
+                    <h1>{{$berita->title}}</h1>
+                        <ul style="color: black">
+                            <li style="display: inline; margin-right: 20px"><i class="fa fa-user"></i> {{$berita->author->name}}</li>
+                            <li style="display: inline; margin-right: 20px"><i class="fa fa-clock-o"></i><time>  {{$berita->created_at}}</time></li>
+                            <li style="display: inline; margin-right: 20px"><i class="fa fa-tags"></i> Berita</li>
+                        </ul>
+                    <p>{!! $berita->body !!}</p>
+                </div>
+            </div>
+        </article>
       </div>
     </div>
 </div>

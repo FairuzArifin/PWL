@@ -4,36 +4,28 @@
 
 @include('dashboard.layouts.navbar')
 
-<div style="background-color: rgb(110, 60, 26);">
+<div style="background-color: rgb(10, 245, 2);">
   <div class="container py-5">
-    <div class="row align-items-center py-5">
-      <div class="col-lg-6">
+    <h2>List Berita dan Infromasi</h2>
         @foreach($beritas as $berita)
-        <article class="post-item">
+        <div class="container py-5" style="background-color: rgb(255, 255, 255); margin-top:10px">
             <div class="post-item-image">
-                <a href="{{route('tampil', $berita->id)}}">            
+                <a style="color: black" href="{{route('tampil', $berita->id)}}">            
                 </a>
             </div>
-            <div class="post-item-body">
-                <div class="padding-10">
                     <h2><a href="{{route('tampil', $berita->id)}}">{{$berita->title}}</a></h2>
                     <p> {!! $berita->excerpt !!} </p>
+                    <ul style="color: black">
+                        <li style="display: inline; margin-right: 20px"><i class="fa fa-user"></i> {{$berita->author->name}}</li>
+                        <li style="display: inline; margin-right: 20px"><i class="fa fa-clock-o"></i><time>  {{$berita->created_at}}</time></li>
+                        <li style="display: inline; margin-right: 20px"><i class="fa fa-tags"></i> Berita</li>
+                        <li style="display: inline" align="right">
+                          <div class="pull-right">
+                            <a href="{{route('tampil', $berita->id)}}">Continue Reading &raquo;</a>
+                        </div>
+                        </li>
+                      </ul>
                 </div>
-                <div class="post-meta padding-10 clearfix">
-                    <div class="pull-left">
-                        <ul class="post-meta-group">
-                            <li><i class="fa fa-user"></i><a href="#"> {{$berita->author->name}}</a></li>
-                            <li><i class="fa fa-clock-o"></i><time> February 12, 2016</time></li>
-                            <li><i class="fa fa-tags"></i><a href="#"> Blog</a></li>
-                            <li><i class="fa fa-comments"></i><a href="#">4 Comments</a></li>
-                        </ul>
-                    </div>
-                    <div class="pull-right">
-                        <a href="{{route('tampil', $berita->id)}}">Continue Reading &raquo;</a>
-                    </div>
-                </div>
-            </div>
-        </article>
         @endforeach
       </div>
   </div>
