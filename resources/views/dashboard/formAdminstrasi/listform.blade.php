@@ -4,16 +4,36 @@
 
 @include('dashboard.layouts.navbar')
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    table {
+        border: 1px solid lightgray;
+    }
+    table th {
+        background-color: silver;
+        text-align: center;
+        padding: 5px;
+        width: auto;
+    }
+    table td {
+        border: 1px dotted silver;
+        word-break: break-all;
+        text-align: left;
+    }
+    </style>
+  </head>
 
-{{--  --}}
-
-<div style="background-color: rgb(9, 255, 0);">
-    <div class="container py-5">
-    <h2>Histori Adminstrasi Warga</h4>  
-      <div class="row align-items-center py-5">                                 
-            <table class ='table table-bordered text-center'>
+<div style="background-color: rgb(255, 255, 255);">
+    <div class="container py-4 mx-5" width="100%">
+        <div class="row align-items-left ">
+            <!-- List Pertanyaan Warga -->
+            <h4 class="card-title"><b>Histori Adminstrasi Warga</b></h4>
+            <table style="width: 1000px; display: table; table-layout: fixed;" class="table table-striped table-bordered text-center table-hover table-responsive">
                 <thead>
-                    <tr>
+                    <tr >
+                        {{--<th></th>--}}
                         <th>Jenis</th>
                         <th>Pengirim</th>
                         <th>Judul</th>
@@ -29,6 +49,7 @@
                 <tbody>
                     @foreach($forms as $form)
                     <tr>
+                        {{--<td><button class="button-primary">Detail</td>--}}
                         <td>{{$form->jenis}}</td>
                         <td>{{$form->name}}</td>
                         <td>{{$form->judul}}</td>
@@ -43,11 +64,10 @@
                     @endforeach
                 </tbody>
             </table>
-                              
-                </div>            
+
+                </div>
            </div>
         </div>
-        </div>
-{{--  --}}
+    </div>
 
 @include('dashboard.layouts.footer')
