@@ -46,11 +46,8 @@
                                 @endif
             
                                 <div class="form-group {{$errors->has('status')?'has-error' : ''}}">
-                                {!! Form::label('Status : ')!!}
-                                <select name="status" disabled>
-                                  <option value="Diproses" selected>Diproses</option>
-                                  <option value="Selesai">Selesai</option>
-                                </select>
+                                  {!! Form::label('status') !!}
+                                  {!! Form::text('status', null, ['class' => 'form-control', 'disabled'])!!}
                                 </div>
                                 @if($errors->has('status'))
                                 <span class="help-block">{{$errors->first('status')}}</span>

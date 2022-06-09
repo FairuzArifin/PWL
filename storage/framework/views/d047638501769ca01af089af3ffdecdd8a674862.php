@@ -53,12 +53,10 @@
                                 <?php endif; ?>
             
                                 <div class="form-group <?php echo e($errors->has('status')?'has-error' : ''); ?>">
-                                <?php echo Form::label('Status : '); ?>
+                                  <?php echo Form::label('status'); ?>
 
-                                <select name="status" disabled>
-                                  <option value="Diproses" selected>Diproses</option>
-                                  <option value="Selesai">Selesai</option>
-                                </select>
+                                  <?php echo Form::text('status', null, ['class' => 'form-control', 'disabled']); ?>
+
                                 </div>
                                 <?php if($errors->has('status')): ?>
                                 <span class="help-block"><?php echo e($errors->first('status')); ?></span>
