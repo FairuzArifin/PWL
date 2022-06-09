@@ -8,7 +8,7 @@
   <div class="container py-5">
     <h2>List Berita dan Infromasi</h2>
         <?php $__currentLoopData = $beritas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $berita): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <div class="container py-5" style="background-color: rgb(172, 172, 172); margin-top:10px">
+        <div class="container py-5" style="background-color: rgb(255, 255, 255); margin-top:10px">
             <div class="post-item-image">
                 <a style="color: black" href="<?php echo e(route('tampil', $berita->id)); ?>">            
                 </a>

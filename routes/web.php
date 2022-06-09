@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminViewController;
 use App\Http\Controllers\FormAdminstrasiController;
+use App\Http\Controllers\FormaController;
 use App\Http\Controllers\Admin\FormController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\pic\FormsController;
@@ -85,6 +86,8 @@ Route::get('/pic/edit/{id}', [App\Http\Controllers\PIC\Formscontroller::class, '
 Route::get('/pic/delete{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'destroy'])->name('formsdelete');
 Route::post('/pic/store', [App\Http\Controllers\PIC\Formscontroller::class, 'store'])->name('formsstore');
 Route::put('/pic/update/{id}', [App\Http\Controllers\PIC\Formscontroller::class, 'update'])->name('formsupdate');
+
+Route::get('/lihat/{id}', [App\Http\Controllers\Formacontroller::class, 'edit'])->name('lihat');
 //Route::get('/register', function () {
     //return view('register');
 //});

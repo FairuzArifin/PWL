@@ -11,12 +11,48 @@
           <p><?php echo e(Auth::user()->name); ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
-      </div>
+      </div>  
+      <?php if(Auth::user()->level === "PIC") { ?>
+      
+      <ul class="sidebar-menu">
+        <li>
+          <a href="/pic">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pencil"></i>
+            <span>Form</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo e(route('formsindex')); ?>"><i class="fa fa-circle-o"></i> List Pertanyaan</a></li>
+            
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pencil"></i>
+            <span>User</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo e(route('usersindex')); ?>"><i class="fa fa-circle-o"></i> List User</a></li>
+            
+          </ul>
+        </li>
+      <?php } ?>
 
+        <?php if(Auth::user()->level === "Admin") { ?>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li>
-          <a href="#">
+          <a href="/admin">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
@@ -59,6 +95,7 @@
             <li><a href="<?php echo e(route('beritacreate')); ?>"><i class="fa fa-circle-o"></i> Buat Berita</a></li>
           </ul>
         </li>
+     <?php } ?>
       </ul>
     </section>
     <!-- /.sidebar -->
